@@ -1,0 +1,60 @@
+{
+  "name": "@jenssimon/webpack-config-sfcc",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "Jens Simon <https://github.com/jenssimon/>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ./ --format=node_modules/eslint-formatter-pretty",
+    "build": "tsc",
+    "prepare": "npm-run-all build"
+  },
+  "dependencies": {
+    "@swc/core": "^1.2.95",
+    "@swc/helpers": "^0.2.13",
+    "autoprefixer": "^10.3.7",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "circular-dependency-plugin": "^5.2.2",
+    "css-loader": "^6.4.0",
+    "css-minimizer-webpack-plugin": "^3.1.1",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-webpack-plugin": "^3.0.1",
+    "mini-css-extract-plugin": "^2.4.2",
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.1.1",
+    "postcss-merge-longhand": "^5.0.2",
+    "postcss-strip-zero-length-units": "^1.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.2.0",
+    "swc-loader": "^0.1.15"
+  },
+  "devDependencies": {
+    "@jenssimon/eslint-config-base": "^4.1.0",
+    "@jenssimon/eslint-config-typescript": "^3.0.3",
+    "@types/case-sensitive-paths-webpack-plugin": "^2.1.6",
+    "@types/circular-dependency-plugin": "^5.0.4",
+    "@types/css-minimizer-webpack-plugin": "^3.0.2",
+    "@types/mini-css-extract-plugin": "^2.3.0",
+    "@types/node": "^16.10.4",
+    "@types/sass": "^1.16.1",
+    "@types/webpack": "^5.28.0",
+    "eslint": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.4.4",
+    "webpack": "^5.58.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@jenssimon/base",
+      "@jenssimon/typescript"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  }
+}
