@@ -2,6 +2,7 @@ import { RuleSetRule } from 'webpack';
 import sass from 'sass';
 import autoprefixer from 'autoprefixer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import postcssPresetEnv from 'postcss-preset-env';
 import postcssMergeLonghand from 'postcss-merge-longhand';
 import postcssStripZeroLengthUnits from 'postcss-strip-zero-length-units';
 import type { ConfigurationFnc } from '../../types';
@@ -36,6 +37,7 @@ const css: ConfigurationFnc<RuleSetRule[]> = (cartridge, options) => [
         options: {
           postcssOptions: {
             plugins: [
+              postcssPresetEnv,
               postcssMergeLonghand,
               postcssStripZeroLengthUnits,
               autoprefixer(),
