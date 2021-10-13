@@ -11,6 +11,7 @@ import type { ConfigurationFnc } from '../../types';
 const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
   swcTarget: target,
   transformNodeModules,
+  sourceMap,
 }) => {
   // Some packages from `node_modules` need to be transpiled. You can specify a list of packages using the
   // `transformNodeModules` option.
@@ -39,7 +40,10 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
         env: {
           loose: true,
         },
-        sourceMaps: true,
+        ...sourceMap ? {
+          sourceMap: true,
+          inlineSourcesContent: true,
+        } : {},
       },
     },
   });
