@@ -1,6 +1,8 @@
-import { Module } from 'webpack';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+
 import { normalizeWebpack5ChunkName } from '../utils';
+
+import type { Module } from 'webpack';
 import type { ConfigurationFnc } from '../types';
 
 /**

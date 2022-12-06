@@ -1,5 +1,5 @@
-import { Compiler, WebpackPluginInstance, RuleSetRule } from 'webpack';
-import { AcceptedPlugin } from 'postcss';
+import type { Compiler, WebpackPluginInstance, RuleSetRule } from 'webpack';
+import type { AcceptedPlugin } from 'postcss';
 
 /**
  * Configuration options for the Webpack configuration.
@@ -38,6 +38,8 @@ export interface SFCCWebpackConfigOptions {
    * *required*
    */
   resolver: RequireResolve;
+
+  entryPoint?: string;
 
   /**
    * The path prefix for the generated bundles.
@@ -121,6 +123,26 @@ export interface SFCCWebpackConfigOptions {
    * Default: `[]`
    */
   projectSpecificRules: RuleSetRule[];
+
+  /**
+   * Aliases
+   *
+   * Default: `{}`
+   */
+  alias: {
+    /**
+     * New request.
+     */
+    alias: string | false | string[];
+    /**
+     * Request to be redirected.
+     */
+    name: string;
+    /**
+     * Redirect only exact matching request.
+     */
+    onlyModule?: boolean;
+  }[] | { [index: string]: string | false | string[] };
 
   /**
    * The target environment for swc (see https://swc.rs/docs/configuring-swc#jsctarget).

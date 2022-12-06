@@ -1,54 +1,75 @@
 {
   "name": "@jenssimon/webpack-config-sfcc",
   "version": "0.1.0",
+  "description": "A shareable Webpack configuration for SFCC projects",
+  "author": "Jens Simon <https://github.com/jenssimon/>",
+  "license": "MIT",
+  "keywords": [
+    "salesforce",
+    "commercecloud",
+    "sfcc",
+    "webpack"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/"
   ],
-  "author": "Jens Simon <https://github.com/jenssimon/>",
-  "license": "MIT",
-  "private": false,
   "scripts": {
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ./ --format=node_modules/eslint-formatter-pretty",
+    "ci-test": "run-s \"ci-test:*\"",
+    "ci-test:lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "ci-test:tsc": "tsc --noEmit",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "build": "tsc",
-    "prepare": "npm-run-all build"
+    "prepare": "npm-run-all build",
+    "commit": "cz",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@swc/core": "^1.2.95",
-    "@swc/helpers": "^0.2.13",
-    "autoprefixer": "^10.3.7",
+    "@swc/core": "^1.3.21",
+    "@swc/helpers": "^0.4.14",
+    "autoprefixer": "^10.4.13",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "circular-dependency-plugin": "^5.2.2",
-    "css-loader": "^6.4.0",
-    "css-minimizer-webpack-plugin": "^3.1.1",
-    "eslint-formatter-pretty": "^4.1.0",
-    "eslint-webpack-plugin": "^3.0.1",
-    "mini-css-extract-plugin": "^2.4.2",
-    "postcss": "^8.3.9",
-    "postcss-loader": "^6.1.1",
-    "postcss-merge-longhand": "^5.0.2",
-    "postcss-preset-env": "^6.7.0",
+    "css-loader": "^6.7.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.2",
+    "postcss-merge-longhand": "^5.1.7",
+    "postcss-preset-env": "^7.8.3",
     "postcss-strip-zero-length-units": "^1.0.0",
-    "sass": "^1.42.1",
-    "sass-loader": "^12.2.0",
-    "swc-loader": "^0.1.15"
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "swc-loader": "^0.2.3"
   },
   "devDependencies": {
-    "@jenssimon/eslint-config-base": "^4.1.0",
-    "@jenssimon/eslint-config-typescript": "^3.0.3",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@jenssimon/eslint-config-base": "^6.4.10",
+    "@jenssimon/eslint-config-typescript": "^3.6.14",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.6",
-    "@types/circular-dependency-plugin": "^5.0.4",
-    "@types/css-minimizer-webpack-plugin": "^3.0.2",
-    "@types/mini-css-extract-plugin": "^2.3.0",
-    "@types/node": "^16.10.4",
-    "@types/postcss-preset-env": "^6.7.3",
-    "@types/sass": "^1.16.1",
+    "@types/circular-dependency-plugin": "^5.0.5",
+    "@types/css-minimizer-webpack-plugin": "^3.2.1",
+    "@types/mini-css-extract-plugin": "^2.5.1",
+    "@types/node": "^18.11.11",
+    "@types/postcss-preset-env": "^7.7.0",
+    "@types/sass": "^1.43.1",
     "@types/webpack": "^5.28.0",
-    "eslint": "^7.0.0",
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.29.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.4.4",
-    "webpack": "^5.58.1"
+    "pinst": "^3.0.0",
+    "semantic-release": "^19.0.5",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0"
   },
   "eslintConfig": {
     "extends": [
@@ -58,5 +79,18 @@
     "parserOptions": {
       "project": "./tsconfig.json"
     }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": "eslint"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }

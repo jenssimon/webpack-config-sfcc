@@ -2,8 +2,8 @@
  * A shared Webpack configuration for Salesforce Commerce Cloud (SFCC) projects.
  */
 
-import { Configuration } from 'webpack';
 import { getOptions } from './utils';
+import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults';
 import mode from './mode';
 import entry from './entry';
 import output from './output';
@@ -12,7 +12,9 @@ import devtool from './devtool';
 import resolve from './resolve';
 import plugins from './plugins';
 import optimization from './optimization';
-import type { SFCCWebpackConfigOptions } from './types';
+
+import type { Configuration } from 'webpack';
+import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types';
 
 /**
  * Generate a Webpack configuration for a cartridge using the given options.
@@ -20,17 +22,25 @@ import type { SFCCWebpackConfigOptions } from './types';
  * @param {string} cartridge the name of the cartridge
  * @param {Object} opts The options
  */
-export = (cartridge: string, opts: Partial<SFCCWebpackConfigOptions>): Configuration => {
+const generateConfiguration = (cartridge: string, opts: Partial<SFCCWebpackConfigOptions>): Configuration => {
   const options = getOptions(opts);
 
-  return {
-    mode: mode(cartridge, options),
-    entry: entry(cartridge, options),
-    output: output(cartridge, options),
-    module: module(cartridge, options),
-    devtool: devtool(cartridge, options),
-    resolve: resolve(cartridge, options),
-    plugins: plugins(cartridge, options),
-    optimization: optimization(cartridge, options),
-  };
+  return Object.entries<ConfigurationFnc<unknown>>({
+    mode,
+    entry,
+    output,
+    module,
+    devtool,
+    resolve,
+    plugins,
+    optimization,
+  }).reduce<Partial<Configuration>>((prev, [key, value]) => {
+    (prev as any)[key] = value(cartridge, options); // eslint-disable-line @typescript-eslint/no-explicit-any
+    return prev;
+  }, {});
 };
+
+generateConfiguration.DEFAULT_DEVELOPMENT = DEFAULT_DEVELOPMENT;
+generateConfiguration.DEFAULT_PRODUCTION = DEFAULT_PRODUCTION;
+
+export = generateConfiguration;

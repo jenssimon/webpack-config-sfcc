@@ -1,6 +1,7 @@
-import { ModuleOptions } from 'webpack';
-import type { ConfigurationFnc } from '../types';
 import rules from './rules';
+
+import type { ModuleOptions } from 'webpack';
+import type { ConfigurationFnc } from '../types';
 
 /**
  * The module configuration. (see https://webpack.js.org/configuration/module/)

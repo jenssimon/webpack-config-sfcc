@@ -1,7 +1,8 @@
-import { RuleSetRule } from 'webpack';
-import type { ConfigurationFnc } from '../../types';
 import swcRules from './swc';
 import cssRules from './css';
+
+import type { RuleSetRule } from 'webpack';
+import type { ConfigurationFnc } from '../../types';
 
 /**
  * The rules configuration (see https://webpack.js.org/configuration/module/#modulerules)

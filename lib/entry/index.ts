@@ -1,4 +1,4 @@
-import { EntryObject } from 'webpack';
+import type { EntryObject } from 'webpack';
 import type { SFCCWebpackConfigOptions } from '../types';
 
 type EntryStatic = string | EntryObject | string[];
@@ -9,6 +9,7 @@ type EntryStatic = string | EntryObject | string[];
 const entry = (cartridge: string, {
   devServer = false,
   hmrPath,
+  entryPoint,
 }: SFCCWebpackConfigOptions): | string
   | (() => string | EntryObject | string[] | Promise<EntryStatic>)
   | EntryObject
@@ -22,10 +23,10 @@ const entry = (cartridge: string, {
     ] : [],
 
     // Add polyfills for all targets
-    // 'app_medipolis_core/polyfills.js', // TODO
+    // 'app_xxx_core/polyfills.js', // TODO
 
     // and finally the main entry point
-    `./cartridges/${cartridge}/cartridge/client/default/js/main.js`,
+    `./cartridges/${cartridge}/cartridge/client/default/js/${entryPoint}`,
   ],
 });
 

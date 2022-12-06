@@ -1,4 +1,4 @@
-import { RuleSetRule } from 'webpack';
+import type { RuleSetRule } from 'webpack';
 import type { ConfigurationFnc } from '../../types';
 
 /**
@@ -17,7 +17,7 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
   // `transformNodeModules` option.
   const exclude = (name: string): boolean => (
     name.includes('node_modules')
-      ? !(transformNodeModules ?? []).find((module) => new RegExp(`node_modules[/\\\\]?${module}`).test(name))
+      ? !(transformNodeModules ?? []).some((module) => new RegExp(`node_modules[/\\\\]?${module}`).test(name))
       : false
   );
 
@@ -32,7 +32,6 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
           parser: {
             syntax,
             decorators: true,
-            decoratorsBeforeExport: true,
           },
           target,
           externalHelpers: true,

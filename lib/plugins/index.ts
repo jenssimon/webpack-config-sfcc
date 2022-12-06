@@ -1,11 +1,13 @@
-import { HotModuleReplacementPlugin, WebpackPluginInstance, Compiler } from 'webpack';
+import { HotModuleReplacementPlugin } from 'webpack';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
-import eslintFormatterPretty from 'eslint-formatter-pretty';
-import type { ConfigurationFnc } from '../types';
+
 import { FILE_EXTENSIONS } from '../constants';
+
+import type { ConfigurationFnc } from '../types';
+import type { WebpackPluginInstance, Compiler } from 'webpack';
 
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
@@ -29,14 +31,13 @@ const plugins: ConfigurationFnc<(
   new MiniCssExtractPlugin({
     filename: '../css/core.css',
     chunkFilename: '../css/core.css',
-  }),
+  }) as unknown as WebpackPluginInstance,
 
   // Use Webpack to lint files
   new ESLintPlugin({
     extensions: FILE_EXTENSIONS,
     fix: true,
     lintDirtyModulesOnly: true, // TODO
-    formatter: eslintFormatterPretty,
   }),
 
   ...options.additionalPlugins as unknown as WebpackPluginInstance[],
