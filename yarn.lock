@@ -492,7 +492,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.0.2.tgz#1bfafe4b7ed0f3e4105837e056e0a89b108ebe36"
   integrity sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==
 
-"@eslint-community/eslint-utils@^4.1.0":
+"@eslint-community/eslint-utils@^4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.1.2.tgz#14ca568ddaa291dd19a4a54498badc18c6cfab78"
   integrity sha512-7qELuQWWjVDdVsFQ5+beUl+KPczrEDA7S3zM4QUd/bJl7oXgsmpXaEVqrRTnOBqenOV4rWf2kVZk2Ot085zPWA==
@@ -543,10 +543,10 @@
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"
   integrity sha512-SQ7Kzhh9+D+ZW9MA0zkYv3VXhIDNx+LzM6EJ+/65I3QY+enU6Itte7E5XX7EWrqLW2FN4n06GWzBnPoC3th2aQ==
 
-"@jenssimon/eslint-config-base@6.4.10":
-  version "6.4.10"
-  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.4.10.tgz#94b4b9d123cf311e2ebd8d80d4b743245d883dd2"
-  integrity sha512-F6T8itx3qmF4K+Cvuqr70y2Gs1FnIf8vtIarL3YPoYbHw24RylxOPXZe2vKHpWTbVG1JNmUoXx8A8eX2SC+uYA==
+"@jenssimon/eslint-config-base@6.4.11":
+  version "6.4.11"
+  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.4.11.tgz#f95755c14ca91493991e6ebd7d0fbddfc0f0a960"
+  integrity sha512-3dqFyd9uWQbt6Q2pHPdNQzj3ksfvKAJA/EuHWJRgredUugBhsAy6yg1V8C0+KsAfCZp1ZSn/qQNk5XeqasHeag==
   dependencies:
     "@babel/core" "^7.19.1"
     "@babel/eslint-parser" "^7.19.1"
@@ -564,7 +564,7 @@
     eslint-plugin-react-hooks "4.6.0"
     eslint-plugin-react-redux "4.0.0"
     eslint-plugin-sonarjs "0.17.0"
-    eslint-plugin-unicorn "45.0.1"
+    eslint-plugin-unicorn "45.0.2"
 
 "@jenssimon/eslint-config-typescript@3.6.15":
   version "3.6.15"
@@ -3142,13 +3142,13 @@ eslint-plugin-sonarjs@0.17.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.17.0.tgz#e026065809e35d286f576ddea094727eeb9cdadd"
   integrity sha512-jtGtxI49UbJJeJj7CVRLI3+LLH+y+hkR3GOOwM7vBbci9DEFIRGCWvEd2BJScrzltZ6D6iubukTAfc9cyG7sdw==
 
-eslint-plugin-unicorn@45.0.1:
-  version "45.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-45.0.1.tgz#2307f4620502fd955c819733ce1276bed705b736"
-  integrity sha512-tLnIw5oDJJc3ILYtlKtqOxPP64FZLTkZkgeuoN6e7x6zw+rhBjOxyvq2c7577LGxXuIhBYrwisZuKNqOOHp3BA==
+eslint-plugin-unicorn@45.0.2:
+  version "45.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-45.0.2.tgz#d6ba704793a6909fe5dfe013900d2b05b715284c"
+  integrity sha512-Y0WUDXRyGDMcKLiwgL3zSMpHrXI00xmdyixEGIg90gHnj0PcHY4moNv3Ppje/kDivdAy5vUeUr7z211ImPv2gw==
   dependencies:
     "@babel/helper-validator-identifier" "^7.19.1"
-    "@eslint-community/eslint-utils" "^4.1.0"
+    "@eslint-community/eslint-utils" "^4.1.2"
     ci-info "^3.6.1"
     clean-regexp "^1.0.0"
     esquery "^1.4.0"
