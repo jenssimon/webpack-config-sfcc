@@ -9,6 +9,7 @@
 This is a battle-proof Webpack configuration used and matured in multiple Salesforce Commerce Cloud storefront projects. To make these configurations shareable and maintainable this package was created.
 
 ## Table of Contents
+
 - [@jenssimon/webpack-config-sfcc](#jenssimonwebpack-config-sfcc)
   - [General](#general)
   - [Table of Contents](#table-of-contents)
@@ -18,11 +19,29 @@ This is a battle-proof Webpack configuration used and matured in multiple Salesf
     - [`webpack.config.js`](#webpackconfigjs)
     - [`webpack.config.prod.js`](#webpackconfigprodjs)
     - [`webpack.cartridges.js`](#webpackcartridgesjs)
-  - [Configurations](#configurations)
-    - [Base configuration](#base-configuration)
-    - [Frontend Standard](#frontend-standard)
-    - [Frontend React](#frontend-react)
+  - [Configuration](#configuration)
+    - [dirname](#dirname)
+    - [resolver](#resolver)
+    - [entryPoint](#entrypoint)
+    - [pathPrefix](#pathprefix)
+    - [sourceMap](#sourcemap)
+    - [devServer](#devserver)
+    - [publicPath](#publicpath)
+    - [hmrPath](#hmrpath)
+    - [production](#production)
+    - [preCSSExtractLoaders](#precssextractloaders)
+    - [additionalPlugins](#additionalplugins)
+    - [additionalPostCSSPlugins](#additionalpostcssplugins)
+    - [additionalDefine](#additionaldefine)
+    - [noLint](#nolint)
+    - [onlyCartridge](#onlycartridge)
+    - [projectSpecificRules](#projectspecificrules)
+    - [alias](#alias)
+    - [aliasCartridges](#aliascartridges)
+    - [swcTarget](#swctarget)
+    - [transformNodeModules](#transformnodemodules)
   - [License](#license)
+
 ## Features
 
 - Webpack 5
@@ -48,11 +67,13 @@ This is a battle-proof Webpack configuration used and matured in multiple Salesf
 ## Installation
 
 1. Install the package:
+
     ```sh
-    $ yarn add @jenssimon/webpack-config-sfcc --dev
+    yarn add @jenssimon/webpack-config-sfcc --dev
     ```
-1. Create the development webpack configuration `webpack.config.js`
-1. Create the production webpack configuration `webpack.config.prod.js`
+
+2. Create the development webpack configuration `webpack.config.js`
+3. Create the production webpack configuration `webpack.config.prod.js`
 
 ## Webpack configuration files
 
@@ -110,162 +131,170 @@ Those configurations can contain additional Webpack rules, aliases, ... For more
 
 ## Configuration
 
-For configuration the following object is used:
+### dirname
 
-| Property  | Type     | Description                               | Default | Required |
-| --------- | -------- | ----------------------------------------- | ------- | -------- |
-| `dirname` | `string` | The value of `__dirname` from the project |
+The `__dirname` value of the outside `webpack.config.js` file.
+Used to resolve paths from the package that consumes the generated Webpack configuration.
 
-  dirname: string;
+Required
 
-  /**
-   * The `require.resolve` function of the package that consumes the generated Webpack configuration.
-   *
-   * Used to resolve modules.
-   * Just add
-   *
-   * ```
-   * {
-   *   resolver: require.resolve,
-   *   // ...
-   * }
-   * ```
-   *
-   * *required*
-   */
-  resolver: RequireResolve;
+Just add
 
-  entryPoint?: string;
+```javascript
+{
+  dirname: __dirname,
+  // ...
+}
+```
 
-  /**
-   * The path prefix for the generated bundles.
-   *
-   * This is used to bundle files to another subfolder during the production build (e.g. `dist/`)..
-   *
-   * Default: `undefined`
-   */
-  pathPrefix?: string;
+### resolver
 
-  /**
-   * Generate source maps for `.js` and `.css` files.
-   *
-   * Default: `false`
-   */
-  sourceMap: boolean;
+The `require.resolve` function of the package that consumes the generated Webpack configuration.
+Used to resolve modules.
 
-  /**
-   * Build Webpack config for usage with dev server.
-   *
-   * Default: `false`
-   */
-  devServer: boolean;
+Required
 
-  /**
-   * TODO
-   */
-  publicPath?: string;
+Just add
 
-  /**
-   * TODO
-   */
-  hmrPath?: string;
+```javascript
+{
+  resolver: require.resolve,
+  // ...
+}
+```
 
-  /**
-   * Use production mode.
-   *
-   * Default: `false`
-   */
-  production: boolean;
+### entryPoint
 
-  /**
-   * Loaders executed before `mini-css-extract-plugin` loader.
-   *
-   * Default: `[]`
-   * TODO
-   */
-  preCSSExtractLoaders: string[];
+The entrypoint of the application.
 
-  /**
-   * TODO
-   */
-  additionalPlugins: ((this: Compiler, compiler: Compiler) => void) | WebpackPluginInstance[];
+Default: `index.js`
 
-  /**
-   * TODO
-   */
-  additionalPostCSSPlugins: AcceptedPlugin[];
+### pathPrefix
 
-  /**
-   * TODO
-   */
-  additionalDefine: Record<string, unknown>;
+The path prefix for the generated bundles.
 
-  /**
-   * Disable linting.
-   * Useful when linting was already done before Webpack build.
-   *
-   * Default: `false`
-   */
-  noLint: boolean;
+Default: `undefined`
 
-  /**
-   * TODO
-   */
-  onlyCartridge?: string;
+This is used to bundle files to another subfolder during the production build (e.g. `dist/`)..
 
-  /**
-   * Additional Webpack rules (see https://webpack.js.org/configuration/module/#modulerules) used for your cartridge.
-   *
-   * Default: `[]`
-   */
-  projectSpecificRules: RuleSetRule[];
+### sourceMap
 
-  /**
-   * Aliases
-   *
-   * Default: `{}`
-   */
-  alias: {
-    /**
-     * New request.
-     */
-    alias: string | false | string[];
-    /**
-     * Request to be redirected.
-     */
-    name: string;
-    /**
-     * Redirect only exact matching request.
-     */
-    onlyModule?: boolean;
-  }[] | { [index: string]: string | false | string[] };
+Generate source maps for `.js` and `.css` files.
 
-  /**
-   * The target environment for swc (see https://swc.rs/docs/configuring-swc#jsctarget).
-   *
-   * Default: `"es2015"`
-   */
-  swcTarget?: string;
+Default: `false`
 
-  /**
-   * Some packages from `node_modules` need to be transpiled. You can specify a list of packages using this option.
-   *
-   * Example:
-   * ```
-   * transformNodeModules: [
-   *   'lit',
-   *   'lit-element',
-   *   'lit-html',
-   * ],
-   * ```
-   *
-   * Default: `[]`
-   */
-  transformNodeModules?: string[];
+### devServer
+
+Build Webpack config for usage with dev server.
+
+Default: `false`
+
+### publicPath
+
+TODO
+
+### hmrPath
+
+TODO
+
+### production
+
+Use production mode.
+
+Default: `false`
+
+### preCSSExtractLoaders
+
+Loaders executed before `mini-css-extract-plugin` loader.
+
+Default: `[]`
+
+TODO
+
+### additionalPlugins
+
+TODO
+
+### additionalPostCSSPlugins
+
+TODO
+
+### additionalDefine
+
+TODO
+
+### noLint
+
+Disable linting.
+Useful when linting was already done before Webpack build.
+
+Default: `false`
+
+### onlyCartridge
+
+TODO
+
+### projectSpecificRules
+
+Additional Webpack rules (see https://webpack.js.org/configuration/module/#modulerules) used for your cartridge.
+
+Default: `[]`
+
+### alias
+
+Aliases
+
+Default: `{}`
+
+### aliasCartridges
+
+Cartridges that needs an alias configuration.
+
+Example:
+
+```javascript
+aliasCartridges: [
+  { alias: 'foo', cartridge: 'app_foo' },
+],
+```
+
+This configuration creates the aliases `foo` (for JS) and `foo-css` (for CSS/SCSS).
+
+You can skip the generation of the `-css` alias using the `noStyle` flag:
+
+```javascript
+aliasCartridges: [
+  { alias: 'bar', cartridge: 'app_bar', noStyle: true },
+],
+```
+
+Aliases for `app_storefront_base` will be created by default.
+
+### swcTarget
+
+The target environment for swc (see https://swc.rs/docs/configuring-swc#jsctarget).
+
+Default: `"es2015"`
+
+### transformNodeModules
+
+Some packages from `node_modules` need to be transpiled. You can specify a list of packages using this option.
+
+Default: `[]`
+
+Example:
+
+```javascript
+transformNodeModules: [
+  'lit',
+  'lit-element',
+  'lit-html',
+],
+```
 
 ## License
 
-MIT © 2021 [Jens Simon](https://github.com/jenssimon)
+MIT © 2022 [Jens Simon](https://github.com/jenssimon)
 
 [npm-url]: https://www.npmjs.com/package/@jenssimon/webpack-config-sfcc
 [npm-image]: https://badgen.net/npm/v/@jenssimon/webpack-config-sfcc

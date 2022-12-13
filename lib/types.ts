@@ -2,11 +2,34 @@ import type { Compiler, WebpackPluginInstance, RuleSetRule } from 'webpack';
 import type { AcceptedPlugin } from 'postcss';
 
 /**
+ * Configuration for cartridge aliases.
+ */
+export interface CartridgeAliasConfig {
+  /**
+   * The name of the alias.
+   * This is the alias you will use in code.
+   */
+  alias: string;
+
+  /**
+   * The name of the SFCC cartridge to alias.
+   */
+  cartridge: string;
+
+  /**
+   * Don't add an `-css` alias for this cartridge. Only JS.
+   */
+  noStyle?: boolean;
+}
+
+/**
  * Configuration options for the Webpack configuration.
  */
 export interface SFCCWebpackConfigOptions {
   /**
    * The `__dirname` value of the outside `webpack.config.js` file.
+   *
+   * Required
    *
    * Used to resolve paths from the package that consumes the generated Webpack configuration.
    * Just add
@@ -17,15 +40,15 @@ export interface SFCCWebpackConfigOptions {
    *   // ...
    * }
    * ```
-   *
-   * *required*
    */
   dirname: string;
 
   /**
    * The `require.resolve` function of the package that consumes the generated Webpack configuration.
-   *
    * Used to resolve modules.
+   *
+   * Required
+   *
    * Just add
    *
    * ```
@@ -34,19 +57,22 @@ export interface SFCCWebpackConfigOptions {
    *   // ...
    * }
    * ```
-   *
-   * *required*
    */
   resolver: RequireResolve;
 
+  /**
+   * The entrypoint of the application.
+   *
+   * Default: `index.js`
+   */
   entryPoint?: string;
 
   /**
    * The path prefix for the generated bundles.
    *
-   * This is used to bundle files to another subfolder during the production build (e.g. `dist/`)..
-   *
    * Default: `undefined`
+   *
+   * This is used to bundle files to another subfolder during the production build (e.g. `dist/`)..
    */
   pathPrefix?: string;
 
@@ -145,6 +171,31 @@ export interface SFCCWebpackConfigOptions {
   }[] | { [index: string]: string | false | string[] };
 
   /**
+   * Cartridges that needs an alias configuration.
+   *
+   * Example:
+   *
+   * ```
+   * aliasCartridges: [
+   *   { alias: 'foo', cartridge: 'app_foo' },
+   * ],
+   * ```
+   *
+   * This configuration creates the aliases `foo` (for JS) and `foo-css` (for CSS/SCSS).
+   *
+   * You can skip the generation of the `-css` alias using the `noStyle` flag:
+   *
+   * ```
+   * aliasCartridges: [
+   *   { alias: 'bar', cartridge: 'app_bar', noStyle: true },
+   * ],
+   * ```
+   *
+   * Aliases for `app_storefront_base` will be created by default.
+   */
+  aliasCartridges?: CartridgeAliasConfig[];
+
+  /**
    * The target environment for swc (see https://swc.rs/docs/configuring-swc#jsctarget).
    *
    * Default: `"es2015"`
@@ -153,6 +204,8 @@ export interface SFCCWebpackConfigOptions {
 
   /**
    * Some packages from `node_modules` need to be transpiled. You can specify a list of packages using this option.
+   *
+   * Default: `[]`
    *
    * Example:
    * ```
@@ -163,7 +216,6 @@ export interface SFCCWebpackConfigOptions {
    * ],
    * ```
    *
-   * Default: `[]`
    */
   transformNodeModules?: string[];
 }
