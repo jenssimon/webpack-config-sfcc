@@ -543,10 +543,10 @@
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"
   integrity sha512-SQ7Kzhh9+D+ZW9MA0zkYv3VXhIDNx+LzM6EJ+/65I3QY+enU6Itte7E5XX7EWrqLW2FN4n06GWzBnPoC3th2aQ==
 
-"@jenssimon/eslint-config-base@6.4.11":
-  version "6.4.11"
-  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.4.11.tgz#f95755c14ca91493991e6ebd7d0fbddfc0f0a960"
-  integrity sha512-3dqFyd9uWQbt6Q2pHPdNQzj3ksfvKAJA/EuHWJRgredUugBhsAy6yg1V8C0+KsAfCZp1ZSn/qQNk5XeqasHeag==
+"@jenssimon/eslint-config-base@6.4.12":
+  version "6.4.12"
+  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.4.12.tgz#f97ff262e71b934f3670933b84b7cc8421274373"
+  integrity sha512-mBRrcGCi1k45edUiINqY23EJnuCqM69ck3bRyNUyF11IUlUcSv65C05r8l5u472+ZuCPlaTv+Fq1V8jZvsl+eg==
   dependencies:
     "@babel/core" "^7.19.1"
     "@babel/eslint-parser" "^7.19.1"
@@ -556,7 +556,7 @@
     eslint-plugin-babel "5.3.1"
     eslint-plugin-eslint-comments "3.2.0"
     eslint-plugin-import "2.26.0"
-    eslint-plugin-jest "27.1.6"
+    eslint-plugin-jest "27.1.7"
     eslint-plugin-jsx-a11y "6.6.1"
     eslint-plugin-optimize-regex "1.2.1"
     eslint-plugin-promise "6.1.1"
@@ -3012,10 +3012,10 @@ eslint-plugin-import@2.26.0:
     resolve "^1.22.0"
     tsconfig-paths "^3.14.1"
 
-eslint-plugin-jest@27.1.6:
-  version "27.1.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.1.6.tgz#361d943f07d1978838e6b852c44a579f3879e332"
-  integrity sha512-XA7RFLSrlQF9IGtAmhddkUkBuICCTuryfOTfCSWcZHiHb69OilIH05oozH2XA6CEOtztnOd0vgXyvxZodkxGjg==
+eslint-plugin-jest@27.1.7:
+  version "27.1.7"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.1.7.tgz#0351e904afb8d66b7f70452929556dfdc8daba0d"
+  integrity sha512-0QVzf+og4YI1Qr3UoprkqqhezAZjFffdi62b0IurkCXMqPtRW84/UT4CKsYT80h/D82LA9avjO/80Ou1LdgbaQ==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
