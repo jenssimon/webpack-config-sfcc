@@ -368,10 +368,10 @@
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"
   integrity sha512-SQ7Kzhh9+D+ZW9MA0zkYv3VXhIDNx+LzM6EJ+/65I3QY+enU6Itte7E5XX7EWrqLW2FN4n06GWzBnPoC3th2aQ==
 
-"@jenssimon/eslint-config-base@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.5.0.tgz#7117c5c95e5633e44907f0185ae252cf1c0fd3c4"
-  integrity sha512-pg4/YFJ9iT/PByTIfghwPAJNAkS61jrdaSaW4AnERAXtPussYEvKNCRITQuPBjnyb7j1Rdl9YPk3273uOPSPFQ==
+"@jenssimon/eslint-config-base@6.6.1":
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.6.1.tgz#7e214379e87f69115eea05e9d890cf6609f523c9"
+  integrity sha512-DmSDpkoc+QeHBGKY2GP6HibCrY5lkzyYMR6No4/ICC5wn813jz1XGgTMrgVUgr3fTwBhDDn2wSqImOIP1m1rvA==
   dependencies:
     eslint-config-airbnb "19.0.4"
     eslint-config-airbnb-base "15.0.0"
@@ -381,6 +381,7 @@
     eslint-plugin-import "2.26.0"
     eslint-plugin-jest "27.1.7"
     eslint-plugin-jsx-a11y "6.6.1"
+    eslint-plugin-lit "1.7.2"
     eslint-plugin-optimize-regex "1.2.1"
     eslint-plugin-promise "6.1.1"
     eslint-plugin-react "7.31.11"
@@ -388,6 +389,7 @@
     eslint-plugin-react-redux "4.0.0"
     eslint-plugin-sonarjs "0.17.0"
     eslint-plugin-unicorn "45.0.2"
+    eslint-plugin-wc "1.4.0"
 
 "@jenssimon/eslint-config-typescript@3.6.17":
   version "3.6.17"
@@ -2894,6 +2896,15 @@ eslint-plugin-jsx-a11y@6.6.1:
     minimatch "^3.1.2"
     semver "^6.3.0"
 
+eslint-plugin-lit@1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lit/-/eslint-plugin-lit-1.7.2.tgz#97d76a30c1c38f273dd289e1cf066b0b1db32173"
+  integrity sha512-vkz9KvwVfHg7yDQCmokLGzUDypg683miswSw5xBiTszv4Qyus5/CgAK7U7dMgbVBa8G5wxHedY2zr9VCMNTaPQ==
+  dependencies:
+    parse5 "^6.0.1"
+    parse5-htmlparser2-tree-adapter "^6.0.1"
+    requireindex "^1.2.0"
+
 eslint-plugin-optimize-regex@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-optimize-regex/-/eslint-plugin-optimize-regex-1.2.1.tgz#5968c3392f36e2308f48917898f7e6394f5f353c"
@@ -2966,6 +2977,14 @@ eslint-plugin-unicorn@45.0.2:
     safe-regex "^2.1.1"
     semver "^7.3.8"
     strip-indent "^3.0.0"
+
+eslint-plugin-wc@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-wc/-/eslint-plugin-wc-1.4.0.tgz#5996b0c4d7183d0d51765e52bba886cd4aa70741"
+  integrity sha512-AmoKhJyBNcS3I+dbS/JTmRSq4REUvQ/JJCeWJezlK8gqTsdr5JD+EAvHldH/tVvU+l6qR2Tykga5hTINP9zS8A==
+  dependencies:
+    is-valid-element-name "^1.0.0"
+    js-levenshtein-esm "^1.2.0"
 
 eslint-rule-composer@^0.3.0:
   version "0.3.0"
@@ -3976,6 +3995,11 @@ is-plain-object@^5.0.0:
   resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
   integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
 
+is-potential-custom-element-name@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.1.tgz#171ed6f19e3ac554394edf78caa05784a45bebb5"
+  integrity sha512-bCYeRA2rVibKZd+s2625gGnGF/t7DSqDs4dP7CrLA1m7jKWz6pps0LpYLJN8Q64HtmPKJ1hrN3nzPNKFEKOUiQ==
+
 is-regex@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.1.4.tgz#eef5663cd59fa4c0ae339505323df6854bb15958"
@@ -4031,6 +4055,13 @@ is-utf8@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
   integrity sha512-rMYPYvCzsXywIsldgLaSoPlw5PfoB/ssr7hY4pLfcodrA5M/eArza1a9VmTiNIBNMjOGr1Ow9mTyU2o69U6U9Q==
+
+is-valid-element-name@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-valid-element-name/-/is-valid-element-name-1.0.0.tgz#26ef3fd76cdf1f122d105406e32d35b0de005981"
+  integrity sha512-GZITEJY2LkSjQfaIPBha7eyZv+ge0PhBR7KITeCCWvy7VBQrCUdFkvpI+HrAPQjVtVjy1LvlEkqQTHckoszruw==
+  dependencies:
+    is-potential-custom-element-name "^1.0.0"
 
 is-weakref@^1.0.2:
   version "1.0.2"
@@ -4114,6 +4145,11 @@ js-base64@^2.1.9:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.4.tgz#f4e686c5de1ea1f867dbcad3d46d969428df98c4"
   integrity sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==
+
+js-levenshtein-esm@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/js-levenshtein-esm/-/js-levenshtein-esm-1.2.0.tgz#96532c34e0c90df198c9419963c64ca3cf43ae92"
+  integrity sha512-fzreKVq1eD7eGcQr7MtRpQH94f8gIfhdrc7yeih38xh684TNMK9v5aAu2wxfIRMk/GpAJRrzcirMAPIaSDaByQ==
 
 js-sdsl@^4.1.4:
   version "4.2.0"
@@ -5530,6 +5566,18 @@ parse-passwd@^1.0.0:
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
   integrity sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q==
 
+parse5-htmlparser2-tree-adapter@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz#2cdf9ad823321140370d4dbf5d3e92c7c8ddc6e6"
+  integrity sha512-qPuWvbLgvDGilKc5BoicRovlT4MtYT6JfJyBOMDsKoiT+GiuP5qyrPCnR9HcPECIJJmZh5jRndyNThnhhb/vlA==
+  dependencies:
+    parse5 "^6.0.1"
+
+parse5@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
+  integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
+
 path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
@@ -6392,6 +6440,11 @@ require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
+
+requireindex@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.2.0.tgz#3463cdb22ee151902635aa6c9535d4de9c2ef1ef"
+  integrity sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==
 
 resolve-dir@^1.0.0, resolve-dir@^1.0.1:
   version "1.0.1"
