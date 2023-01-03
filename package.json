@@ -1,6 +1,6 @@
 {
   "name": "@jenssimon/webpack-config-sfcc",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "A shareable Webpack configuration for SFCC projects",
   "author": "Jens Simon <https://github.com/jenssimon/>",
   "license": "MIT",
