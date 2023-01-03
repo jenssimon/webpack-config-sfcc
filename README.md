@@ -294,7 +294,7 @@ transformNodeModules: [
 
 ## License
 
-MIT © 2022 [Jens Simon](https://github.com/jenssimon)
+MIT © 2023 [Jens Simon](https://github.com/jenssimon)
 
 [npm-url]: https://www.npmjs.com/package/@jenssimon/webpack-config-sfcc
 [npm-image]: https://badgen.net/npm/v/@jenssimon/webpack-config-sfcc
