@@ -1,7 +1,6 @@
 /**
  * A shared Webpack configuration for Salesforce Commerce Cloud (SFCC) projects.
  */
-
 import { getOptions } from './utils';
 import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults';
 import mode from './mode';
