@@ -4,17 +4,15 @@ import CircularDependencyPlugin from 'circular-dependency-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 
-import { FILE_EXTENSIONS } from '../constants';
+import { FILE_EXTENSIONS } from '../../constants';
 
-import type { ConfigurationFnc } from '../types';
-import type { WebpackPluginInstance, Compiler } from 'webpack';
+import type { Configuration, WebpackPluginInstance, Compiler } from 'webpack';
+import type { ConfigurationFnc } from '../../types';
 
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
  */
-const plugins: ConfigurationFnc<(
-  | ((this: Compiler, compiler: Compiler) => void)
-  | WebpackPluginInstance)[]> = (cartridge, options): (
+const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, options): (
 | ((this: Compiler, compiler: Compiler) => void)
 | WebpackPluginInstance)[] => [
   // check case sensitive paths

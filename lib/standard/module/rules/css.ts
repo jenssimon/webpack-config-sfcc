@@ -6,7 +6,7 @@ import postcssMergeLonghand from 'postcss-merge-longhand';
 import postcssStripZeroLengthUnits from 'postcss-strip-zero-length-units';
 
 import type { RuleSetRule } from 'webpack';
-import type { ConfigurationFnc } from '../../types';
+import type { ConfigurationFnc } from '../../../types';
 
 /**
  * Rules to transform CSS.
@@ -15,8 +15,7 @@ import type { ConfigurationFnc } from '../../types';
  * add some PostCSS transformations as well. `mini-css-extract-plugin` is used to extract the resulting
  * CSS into a separate file.
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const css: ConfigurationFnc<RuleSetRule[]> = (cartridge, options) => [
+const css: ConfigurationFnc<RuleSetRule[]> = () => [
   {
     test: /\.(sass|scss|css)$/,
     use: [

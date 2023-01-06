@@ -1,12 +1,12 @@
-import { RESOLVE_FILE_EXTENSIONS } from '../constants';
+import { RESOLVE_FILE_EXTENSIONS } from '../../constants';
 
-import type { ResolveOptions } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { Configuration } from 'webpack';
+import type { ConfigurationFnc } from '../../types';
 
 /**
  * The resolve configuration. (see https://webpack.js.org/configuration/resolve/)
  */
-const resolve: ConfigurationFnc<ResolveOptions> = (_cartridge, { alias, aliasCartridges, dirname }) => ({
+const resolve: ConfigurationFnc<Configuration['resolve']> = (_cartridge, { alias, aliasCartridges, dirname }) => ({
   alias: {
     ...[
       // standard aliases

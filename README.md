@@ -82,13 +82,13 @@ This is a battle-proof Webpack configuration used and matured in multiple Salesf
 Add a `webpack.config.js` file in your project root. This is the configuration for the development environment.
 
 ```javascript
-const webpackConfig = require('@jenssimon/webpack-config-sfcc');
+const { generateConfiguration, DEFAULT_DEVELOPMENT } = require('@jenssimon/webpack-config-sfcc');
 const cartridges = require('./webpack.cartridges');
 
-module.exports = () => Object.entries(cartridges).map(([cartridge, config]) => webpackConfig(cartridge, {
+module.exports = () => Object.entries(cartridges).map(([cartridge, config]) => generateConfiguration(cartridge, {
   dirname: __dirname,
   resolver: require.resolve,
-  ...webpackConfig.DEFAULT_DEVELOPMENT,
+  ...DEFAULT_DEVELOPMENT,
   ...config,
 }));
 ```
@@ -101,13 +101,13 @@ Add a `webpack.config.prod.js` file in your project root. This is the configurat
 /**
  * Webpack configuration for production build.
  */
-const webpackConfig = require('@jenssimon/webpack-config-sfcc');
+const { generateConfiguration, DEFAULT_PRODUCTION } = require('@jenssimon/webpack-config-sfcc');
 const cartridges = require('./webpack.cartridges');
 
-module.exports = () => Object.entries(cartridges).map(([cartridge, config]) => webpackConfig(cartridge, {
+module.exports = () => Object.entries(cartridges).map(([cartridge, config]) => generateConfiguration(cartridge, {
   dirname: __dirname,
   resolver: require.resolve,
-  ...webpackConfig.DEFAULT_PRODUCTION,
+  ...DEFAULT_PRODUCTION,
   ...config,
 }));
 ```

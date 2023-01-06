@@ -1,19 +1,14 @@
-import type { EntryObject } from 'webpack';
-import type { SFCCWebpackConfigOptions } from '../types';
-
-type EntryStatic = string | EntryObject | string[];
+import type { Configuration } from 'webpack';
+import type { ConfigurationFnc } from '../../types';
 
 /**
  * The entry point configuation (see https://webpack.js.org/configuration/entry-context/#entry)
  */
-const entry = (cartridge: string, {
+const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
   devServer = false,
   hmrPath,
   entryPoint,
-}: SFCCWebpackConfigOptions): | string
-  | (() => string | EntryObject | string[] | Promise<EntryStatic>)
-  | EntryObject
-  | string[] => ({
+}) => ({
   // The main entry point of the application
   app: [
 

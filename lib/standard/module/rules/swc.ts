@@ -1,5 +1,5 @@
 import type { RuleSetRule } from 'webpack';
-import type { ConfigurationFnc } from '../../types';
+import type { ConfigurationFnc } from '../../../types';
 
 /**
  * Rules to transpile JavaScript and TypeScript files using swc (https://swc.rs/).

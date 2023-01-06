@@ -1,4 +1,6 @@
-import type { Compiler, WebpackPluginInstance, RuleSetRule } from 'webpack';
+import type {
+  Compiler, WebpackPluginInstance, RuleSetRule, Configuration,
+} from 'webpack';
 import type { AcceptedPlugin } from 'postcss';
 
 /**
@@ -220,4 +222,11 @@ export interface SFCCWebpackConfigOptions {
   transformNodeModules?: string[];
 }
 
+/**
+ * A function which generates a Webpack config section.
+ */
 export type ConfigurationFnc<T> = (cartridge: string, options: SFCCWebpackConfigOptions) => T;
+
+export type WebpackConfigurationGenerator = (
+  cartridge: string, opts: Partial<SFCCWebpackConfigOptions>
+) => Configuration;
