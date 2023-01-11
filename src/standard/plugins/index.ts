@@ -6,15 +6,13 @@ import ESLintPlugin from 'eslint-webpack-plugin';
 
 import { FILE_EXTENSIONS } from '../../constants';
 
-import type { Configuration, WebpackPluginInstance, Compiler } from 'webpack';
+import type { Configuration, WebpackPluginInstance } from 'webpack';
 import type { ConfigurationFnc } from '../../types';
 
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
  */
-const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, options): (
-| ((this: Compiler, compiler: Compiler) => void)
-| WebpackPluginInstance)[] => [
+const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, options) => [
   // check case sensitive paths
   new CaseSensitivePathsPlugin() as unknown as WebpackPluginInstance,
 

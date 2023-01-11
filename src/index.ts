@@ -2,7 +2,6 @@
  * A shared Webpack configuration for Salesforce Commerce Cloud (SFCC) projects.
  */
 import generateConfiguration from './standard';
-// import generateSfraCssConfiguration from './sfraCss';
 
 import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults';
 
@@ -15,8 +14,6 @@ export = {
   */
   generateConfiguration,
 
-  // generateSfraCssConfiguration,
-
   /* eslint-disable @typescript-eslint/naming-convention */
 
   /**
@@ -28,5 +25,6 @@ export = {
    * Default configuration for production builds.
    */
   DEFAULT_PRODUCTION,
+
   /* eslint-enable @typescript-eslint/naming-convention */
 }
