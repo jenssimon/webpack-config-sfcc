@@ -50,8 +50,8 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
-    "@jenssimon/eslint-config-base": "6.6.9",
-    "@jenssimon/eslint-config-typescript": "3.6.20",
+    "@jenssimon/eslint-config-base": "6.6.10",
+    "@jenssimon/eslint-config-typescript": "3.6.21",
     "@types/case-sensitive-paths-webpack-plugin": "2.1.6",
     "@types/circular-dependency-plugin": "5.0.5",
     "@types/css-minimizer-webpack-plugin": "3.2.1",
