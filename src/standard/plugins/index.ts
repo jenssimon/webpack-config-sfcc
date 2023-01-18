@@ -27,8 +27,8 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
 
   // Extract CSS files from JS bundle
   new MiniCssExtractPlugin({
-    filename: `../css/${cssEntryName}core.css`,
-    chunkFilename: `../css/${cssEntryName}core.css`,
+    filename: `../css/${cssEntryName}.css`,
+    chunkFilename: `../css/${cssEntryName}.css`,
   }) as unknown as WebpackPluginInstance,
 
   // Use Webpack to lint files
