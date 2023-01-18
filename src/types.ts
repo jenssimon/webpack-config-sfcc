@@ -70,6 +70,13 @@ export interface SFCCWebpackConfigOptions {
   entryPoint?: string;
 
   /**
+   * The name of the entrypoint.
+   *
+   * Default: `app`
+   */
+  entryName?: string;
+
+  /**
    * The path prefix for the generated bundles.
    *
    * Default: `undefined`

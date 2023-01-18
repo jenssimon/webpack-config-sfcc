@@ -8,9 +8,10 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
   devServer = false,
   hmrPath,
   entryPoint,
+  entryName,
 }) => ({
   // The main entry point of the application
-  app: [
+  [entryName as string]: [
 
     // Modules needed fot Hot Module Replacement
     ...(devServer && hmrPath) ? [
