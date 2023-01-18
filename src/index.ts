@@ -7,11 +7,11 @@ import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults';
 
 export = {
   /**
-  * Generate a Webpack configuration for a cartridge using the given options.
-  *
-  * @param {string} cartridge the name of the cartridge
-  * @param {Object} opts The options
-  */
+   * Generate a Webpack configuration for a cartridge using the given options.
+   *
+   * @param {string} cartridge the name of the cartridge
+   * @param {Object} opts The options
+   */
   generateConfiguration,
 
   /* eslint-disable @typescript-eslint/naming-convention */

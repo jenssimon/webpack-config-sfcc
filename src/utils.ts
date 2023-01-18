@@ -15,6 +15,7 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     production: false,
     entryPoint: 'index.js',
     entryName: 'app',
+    cssEntryName: 'core',
     preCSSExtractLoaders: [],
     additionalPlugins: [],
     additionalPostCSSPlugins: [],

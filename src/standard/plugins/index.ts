@@ -12,7 +12,9 @@ import type { ConfigurationFnc } from '../../types';
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
  */
-const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, options) => [
+const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
+  cssEntryName, additionalPlugins, devServer,
+}) => [
   // check case sensitive paths
   new CaseSensitivePathsPlugin() as unknown as WebpackPluginInstance,
 
@@ -25,8 +27,8 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, options)
 
   // Extract CSS files from JS bundle
   new MiniCssExtractPlugin({
-    filename: '../css/core.css',
-    chunkFilename: '../css/core.css',
+    filename: `../css/${cssEntryName}core.css`,
+    chunkFilename: `../css/${cssEntryName}core.css`,
   }) as unknown as WebpackPluginInstance,
 
   // Use Webpack to lint files
@@ -36,10 +38,10 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, options)
     lintDirtyModulesOnly: true, // TODO
   }),
 
-  ...options.additionalPlugins as unknown as WebpackPluginInstance[],
+  ...additionalPlugins as unknown as WebpackPluginInstance[],
 
   // HMR support for dev server
-  ...options.devServer ? [
+  ...devServer ? [
     new HotModuleReplacementPlugin() as unknown as WebpackPluginInstance,
   ] : [],
 ];
