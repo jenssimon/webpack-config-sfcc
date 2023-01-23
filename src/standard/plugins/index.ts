@@ -13,7 +13,7 @@ import type { ConfigurationFnc } from '../../types';
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
  */
 const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
-  cssEntryName, additionalPlugins, devServer,
+  cssEntryName, additionalPlugins, devServer, allowCircularDependendies,
 }) => [
   // check case sensitive paths
   new CaseSensitivePathsPlugin() as unknown as WebpackPluginInstance,
@@ -21,7 +21,7 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
   // check for circular dependencies
   new CircularDependencyPlugin({
     exclude: /node_modules/, // exclude detection of files based on a RegExp
-    failOnError: true, // add errors to webpack instead of warnings
+    failOnError: !allowCircularDependendies, // add errors to webpack instead of warnings
     cwd: process.cwd(), // set the current working directory for displaying module paths
   }) as unknown as WebpackPluginInstance,
 

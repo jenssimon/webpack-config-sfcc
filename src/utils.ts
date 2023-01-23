@@ -25,6 +25,7 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     alias: {},
     transformNodeModules: [],
     swcTarget: 'es2015',
+    allowCircularDependendies: false,
   };
   return {
     ...defaults,

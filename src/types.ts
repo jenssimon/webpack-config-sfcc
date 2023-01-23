@@ -234,6 +234,13 @@ export interface SFCCWebpackConfigOptions {
    *
    */
   transformNodeModules?: string[];
+
+  /**
+   * Allow circular dependencies.
+   *
+   * Default: `false`
+   */
+  allowCircularDependendies?: boolean;
 }
 
 /**
