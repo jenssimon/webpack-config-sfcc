@@ -1,5 +1,5 @@
 import type {
-  Compiler, WebpackPluginInstance, RuleSetRule, Configuration,
+  Compiler, WebpackPluginInstance, RuleSetRule, Configuration, EntryObject,
 } from 'webpack';
 import type { AcceptedPlugin } from 'postcss';
 
@@ -137,6 +137,11 @@ export interface SFCCWebpackConfigOptions {
   additionalPlugins: ((this: Compiler, compiler: Compiler) => void) | WebpackPluginInstance[];
 
   /**
+   * Additional entry point configurations.
+   */
+  additionalEntries?: EntryObject;
+
+  /**
    * TODO
    */
   additionalPostCSSPlugins: AcceptedPlugin[];
@@ -240,7 +245,7 @@ export interface SFCCWebpackConfigOptions {
    *
    * Default: `false`
    */
-  allowCircularDependendies?: boolean;
+  allowCircularDependendies: boolean;
 }
 
 /**

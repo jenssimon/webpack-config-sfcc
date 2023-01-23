@@ -9,6 +9,7 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
   hmrPath,
   entryPoint,
   entryName,
+  additionalEntries,
 }) => ({
   // The main entry point of the application
   [entryName as string]: [
@@ -24,6 +25,7 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
     // and finally the main entry point
     `./cartridges/${cartridge}/cartridge/client/default/js/${entryPoint}`,
   ],
+  ...additionalEntries,
 });
 
 export default entry;

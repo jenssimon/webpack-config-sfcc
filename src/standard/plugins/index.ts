@@ -3,6 +3,7 @@ import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
+import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 
 import { FILE_EXTENSIONS } from '../../constants';
 
@@ -13,7 +14,7 @@ import type { ConfigurationFnc } from '../../types';
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
  */
 const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
-  cssEntryName, additionalPlugins, devServer, allowCircularDependendies,
+  /* cssEntryName, */ additionalPlugins, devServer, allowCircularDependendies,
 }) => [
   // check case sensitive paths
   new CaseSensitivePathsPlugin() as unknown as WebpackPluginInstance,
@@ -27,9 +28,17 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
 
   // Extract CSS files from JS bundle
   new MiniCssExtractPlugin({
-    filename: `../css/${cssEntryName}.css`,
-    chunkFilename: `../css/${cssEntryName}.css`,
+    filename: (pathData) => {
+      const ret = '../css/[name].css';
+      const cssPostfix = '-css';
+      return pathData.chunk?.name?.endsWith(cssPostfix)
+        ? ret.replace('[name]', pathData.chunk.name.slice(0, -cssPostfix.length))
+        : ret;
+    },
+    // chunkFilename: '../css/[name].css',
   }) as unknown as WebpackPluginInstance,
+
+  new RemoveEmptyScriptsPlugin({}),
 
   // Use Webpack to lint files
   new ESLintPlugin({

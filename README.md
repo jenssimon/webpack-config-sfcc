@@ -31,6 +31,7 @@ This is a battle-proof Webpack configuration used and matured in multiple Salesf
     - [production](#production)
     - [preCSSExtractLoaders](#precssextractloaders)
     - [additionalPlugins](#additionalplugins)
+    - [additionalEntries](#additionalentries)
     - [additionalPostCSSPlugins](#additionalpostcssplugins)
     - [additionalDefine](#additionaldefine)
     - [noLint](#nolint)
@@ -40,6 +41,7 @@ This is a battle-proof Webpack configuration used and matured in multiple Salesf
     - [aliasCartridges](#aliascartridges)
     - [swcTarget](#swctarget)
     - [transformNodeModules](#transformnodemodules)
+    - [allowCircularDependendies](#allowcirculardependendies)
   - [License](#license)
 
 ## Features
@@ -215,6 +217,10 @@ TODO
 
 TODO
 
+### additionalEntries
+
+Additional entry point configurations.
+
 ### additionalPostCSSPlugins
 
 TODO
@@ -291,6 +297,12 @@ transformNodeModules: [
   'lit-html',
 ],
 ```
+
+### allowCircularDependendies
+
+Allow circular dependencies.
+
+Default: `false`
 
 ## License
 

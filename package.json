@@ -45,7 +45,8 @@
     "postcss-strip-zero-length-units": "^1.0.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
-    "swc-loader": "^0.2.3"
+    "swc-loader": "^0.2.3",
+    "webpack-remove-empty-scripts": "^1.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.2",
