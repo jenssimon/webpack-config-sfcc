@@ -414,10 +414,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@jenssimon/eslint-config-base@6.6.11":
-  version "6.6.11"
-  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.6.11.tgz#8f0923225e67a8576c0bf680d08f6f5b1628660a"
-  integrity sha512-aFYcWoMXzEcs/mxjEaIEWZP3uY551dSindpN4bGhHsXeDSGqZHOMRLMS0Aupp5gCYnvXgZ8ZkrwSqI/ZGBNP1Q==
+"@jenssimon/eslint-config-base@6.6.12":
+  version "6.6.12"
+  resolved "https://registry.yarnpkg.com/@jenssimon/eslint-config-base/-/eslint-config-base-6.6.12.tgz#176cc4d68e7cffb4f775fd9b213da8e92c1c6ce3"
+  integrity sha512-v4avLeHICeY+IUDUxWoKb1OfauwtthY0n+NJk5ZfN+u8Ksuw+sKNmUENfjSe1l6D1qUBzYHMCkKPTIIanbZ1WQ==
   dependencies:
     eslint-config-airbnb "19.0.4"
     eslint-config-airbnb-base "15.0.0"
@@ -434,7 +434,7 @@
     eslint-plugin-react-hooks "4.6.0"
     eslint-plugin-react-redux "4.0.0"
     eslint-plugin-sonarjs "0.18.0"
-    eslint-plugin-unicorn "45.0.2"
+    eslint-plugin-unicorn "46.0.0"
     eslint-plugin-wc "1.4.0"
 
 "@jenssimon/eslint-config-typescript@3.6.27":
@@ -731,10 +731,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.0.tgz#94c47b9217bbac49d4a67a967fdcdeed89ebb7d0"
   integrity sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==
 
-"@types/node@18.14.5":
-  version "18.14.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.5.tgz#4a13a6445862159303fc38586598a9396fc408b3"
-  integrity sha512-CRT4tMK/DHYhw1fcCEBwME9CSaZNclxfzVMe7GsO6ULSwsttbj70wSiX6rZdIjGblu93sTJxLdhNIT85KKI7Qw==
+"@types/node@18.14.6":
+  version "18.14.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.6.tgz#ae1973dd2b1eeb1825695bb11ebfb746d27e3e93"
+  integrity sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2366,10 +2366,10 @@ eslint-plugin-sonarjs@0.18.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.18.0.tgz#7c009452f633cf6a4c28387dd50502a3e828b05e"
   integrity sha512-DJ3osLnt6KFdT5e9ZuIDOjT5A6wUGSLeiJJT03lPgpdD+7CVWlYAw9Goe3bt7SmbFO3Xh89NOCZAuB9XA7bAUQ==
 
-eslint-plugin-unicorn@45.0.2:
-  version "45.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-45.0.2.tgz#d6ba704793a6909fe5dfe013900d2b05b715284c"
-  integrity sha512-Y0WUDXRyGDMcKLiwgL3zSMpHrXI00xmdyixEGIg90gHnj0PcHY4moNv3Ppje/kDivdAy5vUeUr7z211ImPv2gw==
+eslint-plugin-unicorn@46.0.0:
+  version "46.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-46.0.0.tgz#b5cdcc9465fd6e46ab7968b87dd4a43adc8d6031"
+  integrity sha512-j07WkC+PFZwk8J33LYp6JMoHa1lXc1u6R45pbSAipjpfpb7KIGr17VE2D685zCxR5VL4cjrl65kTJflziQWMDA==
   dependencies:
     "@babel/helper-validator-identifier" "^7.19.1"
     "@eslint-community/eslint-utils" "^4.1.2"
