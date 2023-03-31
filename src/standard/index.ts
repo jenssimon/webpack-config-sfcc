@@ -8,6 +8,7 @@ import devtool from './devtool';
 import resolve from './resolve';
 import plugins from './plugins';
 import optimization from './optimization';
+import devServer from './devServer';
 
 import type { WebpackConfigurationGenerator } from '../types';
 
@@ -26,6 +27,7 @@ const generateConfiguration: WebpackConfigurationGenerator = (...args) => genera
   resolve,
   plugins,
   optimization,
+  devServer,
 }, ...args);
 
 export default generateConfiguration;

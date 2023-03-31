@@ -1,5 +1,8 @@
-import type { Configuration } from 'webpack';
+import fs from 'node:fs';
 
+import { parse } from 'yaml';
+
+import type { WebpackOptionsNormalized } from 'webpack';
 import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types';
 
 /**
@@ -27,9 +30,34 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     swcTarget: 'es2015',
     allowCircularDependendies: false,
   };
+
+  const devServer = opts?.env?.WEBPACK_SERVE === true;
+
+  let hostname: string | undefined;
+  let site: string | undefined;
+  let locale: string | undefined;
+
+  try {
+    const dwJson = fs.readFileSync('dw.json', 'utf8');
+    ({ hostname } = JSON.parse(dwJson));
+
+    const devserverYml = fs.readFileSync('devserver.yml', 'utf8');
+    ({ site, locale } = parse(devserverYml));
+  } catch {
+    hostname = undefined;
+    site = undefined;
+    locale = undefined;
+  }
+
   return {
     ...defaults,
     ...opts,
+
+    devServer,
+
+    site,
+    locale,
+    hostname,
   } as SFCCWebpackConfigOptions;
 };
 
@@ -45,7 +73,7 @@ export const generateWebpackConfiguration = (
   sections: { [index: string]: ConfigurationFnc<unknown> },
   cartridge: string,
   opts: Partial<SFCCWebpackConfigOptions>,
-): Configuration => {
+): WebpackOptionsNormalized => {
   const options = getOptions(opts);
 
   return Object
@@ -54,7 +82,7 @@ export const generateWebpackConfiguration = (
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (prev as any)[key] = value(cartridge, options);
       return prev;
-    }, {});
+    }, {}) as WebpackOptionsNormalized;
 };
 
 /**

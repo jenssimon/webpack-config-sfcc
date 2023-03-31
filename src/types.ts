@@ -1,5 +1,5 @@
 import type {
-  Compiler, WebpackPluginInstance, RuleSetRule, Configuration, EntryObject,
+  Compiler, WebpackPluginInstance, RuleSetRule, EntryObject, WebpackOptionsNormalized,
 } from 'webpack';
 import type { AcceptedPlugin } from 'postcss';
 
@@ -105,6 +105,26 @@ export interface SFCCWebpackConfigOptions {
    * Default: `false`
    */
   devServer: boolean;
+
+  /**
+   * TODO
+   */
+  env?: Record<string, string | boolean>;
+
+  /**
+   * TODO
+   */
+  site?: string;
+
+  /**
+   * TODO
+   */
+  locale?: string;
+
+  /**
+   * TODO
+   */
+  hostname?: string;
 
   /**
    * TODO
@@ -255,4 +275,4 @@ export type ConfigurationFnc<T> = (cartridge: string, options: SFCCWebpackConfig
 
 export type WebpackConfigurationGenerator = (
   cartridge: string, opts: Partial<SFCCWebpackConfigOptions>
-) => Configuration;
+) => WebpackOptionsNormalized;
