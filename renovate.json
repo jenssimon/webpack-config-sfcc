@@ -17,7 +17,10 @@
         "digest"
       ],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "excludePackageNames": [
+        "@swc/core"
+      ]
     }
   ]
 }
