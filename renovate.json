@@ -19,7 +19,8 @@
       "automerge": true,
       "automergeType": "branch",
       "excludePackageNames": [
-        "@swc/core"
+        "@swc/core",
+        "@swc/helpers"
       ]
     }
   ]
