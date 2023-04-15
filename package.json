@@ -70,7 +70,7 @@
     "pinst": "3.0.0",
     "typescript": "5.0.4",
     "webpack": "5.79.0",
-    "webpack-dev-server": "4.13.2"
+    "webpack-dev-server": "4.13.3"
   },
   "peerDependencies": {
     "webpack": "^5.76.3"
