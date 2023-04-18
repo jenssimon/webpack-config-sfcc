@@ -33,11 +33,11 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
             syntax,
             decorators: true,
           },
+          transform: {
+            useDefineForClassFields: false,
+          },
           target,
           externalHelpers: true,
-        },
-        env: {
-          loose: true,
         },
         ...sourceMap ? {
           sourceMap: true,
