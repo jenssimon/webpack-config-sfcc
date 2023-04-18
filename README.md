@@ -279,7 +279,7 @@ Aliases for `app_storefront_base` will be created by default.
 
 The target environment for swc (see https://swc.rs/docs/configuring-swc#jsctarget).
 
-Default: `"es2015"`
+Default: `"es2019"`
 
 ### transformNodeModules
 

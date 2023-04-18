@@ -27,7 +27,7 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     projectSpecificRules: [],
     alias: {},
     transformNodeModules: [],
-    swcTarget: 'es2015',
+    swcTarget: 'es2019',
     allowCircularDependendies: false,
   };
 
