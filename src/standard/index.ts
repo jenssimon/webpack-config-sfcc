@@ -15,8 +15,8 @@ import type { WebpackConfigurationGenerator } from '../types';
 /**
  * Generate a Webpack configuration for a cartridge using the given options.
  *
- * @param {string} cartridge the name of the cartridge
- * @param {Object} opts The options
+ * @param cartridge the name of the cartridge
+ * @param opts The options
  */
 const generateConfiguration: WebpackConfigurationGenerator = (...args) => generateWebpackConfiguration({
   mode,

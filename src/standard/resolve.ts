@@ -1,7 +1,7 @@
-import { RESOLVE_FILE_EXTENSIONS } from '../../constants';
+import { RESOLVE_FILE_EXTENSIONS } from '../constants';
 
 import type { Configuration } from 'webpack';
-import type { ConfigurationFnc } from '../../types';
+import type { ConfigurationFnc } from '../types';
 
 /**
  * The resolve configuration. (see https://webpack.js.org/configuration/resolve/)

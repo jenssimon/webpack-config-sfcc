@@ -1,5 +1,5 @@
 import type { WebpackOptionsNormalized } from 'webpack';
-import type { ConfigurationFnc } from '../../types';
+import type { ConfigurationFnc } from '../types';
 
 const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> = (cartridge, {
   devServer, site, locale, hostname,

@@ -1,5 +1,5 @@
 import type { Configuration } from 'webpack';
-import type { ConfigurationFnc } from '../../types';
+import type { ConfigurationFnc } from '../types';
 
 /**
  * Devtool configuration (see https://webpack.js.org/configuration/devtool/)
