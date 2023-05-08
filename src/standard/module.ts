@@ -8,7 +8,7 @@ import type { ConfigurationFnc } from '../types';
  * The module configuration. (see https://webpack.js.org/configuration/module/)
  */
 const module: ConfigurationFnc<Configuration['module']> = (cartridge, options) => ({
-  rules: {
+  rules: [
     // SWC is used to transpile JavaScript and TypeScript files.
     ...swcRules(cartridge, options),
 
@@ -16,7 +16,7 @@ const module: ConfigurationFnc<Configuration['module']> = (cartridge, options) =
     ...cssRules(cartridge, options),
 
     ...options.projectSpecificRules,
-  },
+  ],
 });
 
 export default module;
