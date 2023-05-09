@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "es5",
+    "target": "es2021",
     "outDir": "dist",
     "module": "CommonJS",
     "moduleResolution": "node",

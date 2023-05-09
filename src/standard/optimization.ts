@@ -16,7 +16,7 @@ const optimization: ConfigurationFnc<Configuration['optimization']> = () => ({
         .identifier()
         .split('/')
         .reduceRight((item) => item)
-        .replace(/\//g, '-'),
+        .replaceAll('/', '-'),
     ),
     // minSize: 400000,
   },
