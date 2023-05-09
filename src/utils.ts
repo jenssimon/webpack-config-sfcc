@@ -89,8 +89,8 @@ export const generateWebpackConfiguration = (
  * Change the name of the chunks. There are several problems with the default naming (like too long names).
  */
 export const normalizeWebpack5ChunkName = (name: string): string => name
-  .replace(/node_modules/g, 'nodemodules')
-  .replace(/[._|-]+/g, ' ')
-  .replace(/\b(vendors|nodemodules|js|modules|es)\b/g, '')
+  .replaceAll('node_modules', 'nodemodules')
+  .replaceAll(/[._|-]+/g, ' ')
+  .replaceAll(/\b(vendors|nodemodules|js|modules|es)\b/g, '')
   .trim()
-  .replace(/ +/g, '-');
+  .replaceAll(/ +/g, '-');
