@@ -1,9 +1,9 @@
 /**
  * A shared Webpack configuration for Salesforce Commerce Cloud (SFCC) projects.
  */
-import generateConfiguration from './standard';
+import generateConfiguration from './standard'
 
-import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults';
+import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults'
 
 export = {
   /**

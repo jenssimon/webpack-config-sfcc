@@ -1,11 +1,11 @@
-import sass from 'sass';
-import autoprefixer from 'autoprefixer';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import postcssPresetEnv from 'postcss-preset-env';
-import postcssMergeLonghand from 'postcss-merge-longhand';
+import sass from 'sass'
+import autoprefixer from 'autoprefixer'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import postcssPresetEnv from 'postcss-preset-env'
+import postcssMergeLonghand from 'postcss-merge-longhand'
 
-import type { RuleSetRule } from 'webpack';
-import type { ConfigurationFnc } from '../../../types';
+import type { RuleSetRule } from 'webpack'
+import type { ConfigurationFnc } from '../../../types'
 
 /**
  * Rules to transform CSS.
@@ -58,6 +58,6 @@ const css: ConfigurationFnc<RuleSetRule[]> = () => [
       },
     ],
   },
-];
+]
 
-export default css;
+export default css

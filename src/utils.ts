@@ -1,16 +1,16 @@
-import fs from 'node:fs';
+import fs from 'node:fs'
 
-import { parse } from 'yaml';
+import { parse } from 'yaml'
 
-import type { WebpackOptionsNormalized } from 'webpack';
-import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types';
+import type { WebpackOptionsNormalized } from 'webpack'
+import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types'
 
 /**
  * Process options, add defaults and validate.
  */
 const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigOptions => {
-  if (!opts.dirname) throw new Error('"dirname" option is mandatory. Please use "__dirname" as value.');
-  if (!opts.resolver) throw new Error('"resolver" option is mandatory. Please use "require.resolve" as value.');
+  if (!opts.dirname) throw new Error('"dirname" option is mandatory. Please use "__dirname" as value.')
+  if (!opts.resolver) throw new Error('"resolver" option is mandatory. Please use "require.resolve" as value.')
 
   const defaults: Omit<SFCCWebpackConfigOptions, 'dirname' | 'resolver'> = {
     sourceMap: false,
@@ -29,24 +29,24 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     transformNodeModules: [],
     swcTarget: 'es2019',
     allowCircularDependendies: false,
-  };
+  }
 
-  const devServer = opts?.env?.WEBPACK_SERVE === true;
+  const devServer = opts?.env?.WEBPACK_SERVE === true
 
-  let hostname: string | undefined;
-  let site: string | undefined;
-  let locale: string | undefined;
+  let hostname: string | undefined
+  let site: string | undefined
+  let locale: string | undefined
 
   try {
     const dwJson = fs.readFileSync('dw.json', 'utf8');
-    ({ hostname } = JSON.parse(dwJson));
+    ({ hostname } = JSON.parse(dwJson))
 
     const devserverYml = fs.readFileSync('devserver.yml', 'utf8');
-    ({ site, locale } = parse(devserverYml));
+    ({ site, locale } = parse(devserverYml))
   } catch {
-    hostname = undefined;
-    site = undefined;
-    locale = undefined;
+    hostname = undefined
+    site = undefined
+    locale = undefined
   }
 
   return {
@@ -58,8 +58,8 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     site,
     locale,
     hostname,
-  } as SFCCWebpackConfigOptions;
-};
+  } as SFCCWebpackConfigOptions
+}
 
 /**
  * Generates a Webpack configuration by using an array of configuration functions which create webpack config sections.
@@ -74,16 +74,16 @@ export const generateWebpackConfiguration = (
   cartridge: string,
   opts: Partial<SFCCWebpackConfigOptions>,
 ): WebpackOptionsNormalized => {
-  const options = getOptions(opts);
+  const options = getOptions(opts)
 
   return Object
     .entries(sections)
     .reduce((prev, [key, value]) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (prev as any)[key] = value(cartridge, options);
-      return prev;
-    }, {}) as WebpackOptionsNormalized;
-};
+      (prev as any)[key] = value(cartridge, options)
+      return prev
+    }, {}) as WebpackOptionsNormalized
+}
 
 /**
  * Change the name of the chunks. There are several problems with the default naming (like too long names).
@@ -93,4 +93,4 @@ export const normalizeWebpack5ChunkName = (name: string): string => name
   .replaceAll(/[._|-]+/g, ' ')
   .replaceAll(/\b(vendors|nodemodules|js|modules|es)\b/g, '')
   .trim()
-  .replaceAll(/ +/g, '-');
+  .replaceAll(/ +/g, '-')

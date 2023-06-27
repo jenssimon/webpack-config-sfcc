@@ -1,8 +1,8 @@
-import swcRules from './module/rules/swc';
-import cssRules from './module/rules/css';
+import swcRules from './module/rules/swc'
+import cssRules from './module/rules/css'
 
-import type { Configuration } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { Configuration } from 'webpack'
+import type { ConfigurationFnc } from '../types'
 
 /**
  * The module configuration. (see https://webpack.js.org/configuration/module/)
@@ -17,6 +17,6 @@ const theModule: ConfigurationFnc<Configuration['module']> = (cartridge, options
 
     ...options.projectSpecificRules,
   ],
-});
+})
 
-export default theModule;
+export default theModule

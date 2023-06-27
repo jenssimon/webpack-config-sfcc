@@ -17,9 +17,9 @@
   ],
   "scripts": {
     "ci-test": "run-s \"ci-test:*\"",
-    "ci-test:lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "ci-test:lint": "eslint --ext .js,.jsx,.mjs,.cja,.ts,.tsx,.mts,.cts .",
     "ci-test:tsc": "tsc --noEmit",
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --fix --ext .js,.jsx,.mjs,.cja,.ts,.tsx,.mts,.cts .",
     "build": "tsc",
     "prepare": "npm-run-all build",
     "commit": "cz",

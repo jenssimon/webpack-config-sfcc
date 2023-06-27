@@ -1,9 +1,9 @@
-import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 
-import { normalizeWebpack5ChunkName } from '../utils';
+import { normalizeWebpack5ChunkName } from '../utils'
 
-import type { Configuration, Module } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { Configuration, Module } from 'webpack'
+import type { ConfigurationFnc } from '../types'
 
 /**
  * The optimization configuration. (see https://webpack.js.org/configuration/optimization/)
@@ -25,6 +25,6 @@ const optimization: ConfigurationFnc<Configuration['optimization']> = () => ({
     '...',
     new CssMinimizerPlugin(),
   ],
-});
+})
 
-export default optimization;
+export default optimization

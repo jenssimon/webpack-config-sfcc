@@ -1,7 +1,7 @@
 import type {
   Compiler, WebpackPluginInstance, RuleSetRule, EntryObject, WebpackOptionsNormalized,
-} from 'webpack';
-import type { AcceptedPlugin } from 'postcss';
+} from 'webpack'
+import type { AcceptedPlugin } from 'postcss'
 
 /**
  * Configuration for cartridge aliases.

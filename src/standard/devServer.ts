@@ -1,5 +1,5 @@
-import type { WebpackOptionsNormalized } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { WebpackOptionsNormalized } from 'webpack'
+import type { ConfigurationFnc } from '../types'
 
 const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> = (cartridge, {
   devServer, site, locale, hostname,
@@ -22,7 +22,7 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setupMiddlewares: (middlewares: any, server: any) => {
       if (!server) {
-        throw new Error('webpack-dev-server is not defined');
+        throw new Error('webpack-dev-server is not defined')
       }
 
       server.app.get(
@@ -33,12 +33,12 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
         (req: any, res: any) => {
           res.redirect(`/on/demandware.static/Sites-${
             site
-          }-Site/-/${locale}/${req.params.staticfile}`);
+          }-Site/-/${locale}/${req.params.staticfile}`)
         },
-      );
-      return middlewares;
+      )
+      return middlewares
     },
   }
-  : undefined);
+  : undefined)
 
-export default devServerConfig;
+export default devServerConfig

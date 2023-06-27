@@ -1,14 +1,14 @@
-import { HotModuleReplacementPlugin } from 'webpack';
-import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
-import CircularDependencyPlugin from 'circular-dependency-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import ESLintPlugin from 'eslint-webpack-plugin';
-import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
+import { HotModuleReplacementPlugin } from 'webpack'
+import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
+import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
 
-import { FILE_EXTENSIONS } from '../constants';
+import { FILE_EXTENSIONS } from '../constants'
 
-import type { Configuration, WebpackPluginInstance } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { Configuration, WebpackPluginInstance } from 'webpack'
+import type { ConfigurationFnc } from '../types'
 
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
@@ -29,11 +29,11 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
   // Extract CSS files from JS bundle
   new MiniCssExtractPlugin({
     filename: (pathData) => {
-      const ret = '../css/[name].css';
-      const cssPostfix = '-css';
+      const ret = '../css/[name].css'
+      const cssPostfix = '-css'
       return pathData.chunk?.name?.endsWith(cssPostfix)
         ? ret.replace('[name]', pathData.chunk.name.slice(0, -cssPostfix.length))
-        : ret;
+        : ret
     },
     // chunkFilename: '../css/[name].css',
   }) as unknown as WebpackPluginInstance,
@@ -53,6 +53,6 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
   ...devServer ? [
     new HotModuleReplacementPlugin() as unknown as WebpackPluginInstance,
   ] : [],
-];
+]
 
-export default plugins;
+export default plugins
