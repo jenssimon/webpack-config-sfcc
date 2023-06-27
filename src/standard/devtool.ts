@@ -1,5 +1,5 @@
-import type { Configuration } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { Configuration } from 'webpack'
+import type { ConfigurationFnc } from '../types'
 
 /**
  * Devtool configuration (see https://webpack.js.org/configuration/devtool/)
@@ -8,11 +8,11 @@ import type { ConfigurationFnc } from '../types';
  */
 const devtool: ConfigurationFnc<Configuration['devtool']> = (cartridge, { sourceMap, devServer }) => {
   // Set devTool mode, use another mode when running in devServer
-  let theDevtool;
+  let theDevtool
   if (sourceMap) {
-    theDevtool = devServer ? 'inline-source-map' : 'source-map';
+    theDevtool = devServer ? 'inline-source-map' : 'source-map'
   }
-  return theDevtool;
-};
+  return theDevtool
+}
 
-export default devtool;
+export default devtool

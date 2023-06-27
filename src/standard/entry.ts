@@ -1,5 +1,5 @@
-import type { Configuration } from 'webpack';
-import type { ConfigurationFnc } from '../types';
+import type { Configuration } from 'webpack'
+import type { ConfigurationFnc } from '../types'
 
 /**
  * The entry point configuation (see https://webpack.js.org/configuration/entry-context/#entry)
@@ -26,6 +26,6 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
     `./cartridges/${cartridge}/cartridge/client/default/js/${entryPoint}`,
   ],
   ...additionalEntries,
-});
+})
 
-export default entry;
+export default entry

@@ -1,5 +1,5 @@
-import type { RuleSetRule } from 'webpack';
-import type { ConfigurationFnc } from '../../../types';
+import type { RuleSetRule } from 'webpack'
+import type { ConfigurationFnc } from '../../../types'
 
 /**
  * Rules to transpile JavaScript and TypeScript files using swc (https://swc.rs/).
@@ -19,7 +19,7 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
     name.includes('node_modules')
       ? !(transformNodeModules ?? []).some((module) => new RegExp(`node_modules[/\\\\]?${module}`).test(name))
       : false
-  );
+  )
 
   // to reduce DRY code
   const swcConfig = (test: RegExp, syntax?: string): RuleSetRule => ({
@@ -45,12 +45,12 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
         } : {},
       },
     },
-  });
+  })
 
   return [
     swcConfig(/\.m?js$/),
     swcConfig(/\.ts$/, 'typescript'),
-  ];
-};
+  ]
+}
 
-export default swc;
+export default swc
