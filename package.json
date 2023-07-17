@@ -52,7 +52,7 @@
     "@commitlint/cli": "17.6.6",
     "@commitlint/config-conventional": "17.6.6",
     "@jenssimon/eslint-config-base": "7.0.3",
-    "@jenssimon/eslint-config-typescript": "4.0.2",
+    "@jenssimon/eslint-config-typescript": "4.0.3",
     "@types/case-sensitive-paths-webpack-plugin": "2.1.6",
     "@types/circular-dependency-plugin": "5.0.5",
     "@types/css-minimizer-webpack-plugin": "3.2.1",
