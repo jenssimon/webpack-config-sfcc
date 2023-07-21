@@ -38,7 +38,7 @@
     "css-minimizer-webpack-plugin": "4.2.2",
     "eslint-webpack-plugin": "4.0.1",
     "mini-css-extract-plugin": "2.7.6",
-    "postcss": "8.4.26",
+    "postcss": "8.4.27",
     "postcss-loader": "7.3.3",
     "postcss-merge-longhand": "6.0.0",
     "postcss-preset-env": "^9.0.0",
