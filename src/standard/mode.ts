@@ -1,6 +1,6 @@
 import type { Configuration } from 'webpack'
 
-import type { ConfigurationFnc } from '../types'
+import type { ConfigurationFnc } from '../types.js'
 
 /**
  * The mode configuration (production or development). (see https://webpack.js.org/configuration/mode/)

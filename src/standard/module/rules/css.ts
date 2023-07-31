@@ -1,11 +1,11 @@
-import sass from 'sass'
+import * as sass from 'sass'
 import autoprefixer from 'autoprefixer'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssMergeLonghand from 'postcss-merge-longhand'
 
 import type { RuleSetRule } from 'webpack'
-import type { ConfigurationFnc } from '../../../types'
+import type { ConfigurationFnc } from '../../../types.js'
 
 /**
  * Rules to transform CSS.

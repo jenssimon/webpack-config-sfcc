@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import { parse } from 'yaml'
 
 import type { WebpackOptionsNormalized } from 'webpack'
-import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types'
+import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types.js'
 
 /**
  * Process options, add defaults and validate.

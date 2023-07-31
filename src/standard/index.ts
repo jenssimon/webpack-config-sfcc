@@ -1,16 +1,16 @@
-import { generateWebpackConfiguration } from '../utils'
+import { generateWebpackConfiguration } from '../utils.js'
 
-import mode from './mode'
-import entry from './entry'
-import output from './output'
-import module from './module'
-import devtool from './devtool'
-import resolve from './resolve'
-import plugins from './plugins'
-import optimization from './optimization'
-import devServer from './devServer'
+import mode from './mode.js'
+import entry from './entry.js'
+import output from './output.js'
+import module from './module.js'
+import devtool from './devtool.js'
+import resolve from './resolve.js'
+import plugins from './plugins.js'
+import optimization from './optimization.js'
+import devServer from './devServer.js'
 
-import type { WebpackConfigurationGenerator } from '../types'
+import type { WebpackConfigurationGenerator } from '../types.js'
 
 /**
  * Generate a Webpack configuration for a cartridge using the given options.

@@ -1,14 +1,17 @@
-import { HotModuleReplacementPlugin } from 'webpack'
+import webpack from 'webpack'
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
 import CircularDependencyPlugin from 'circular-dependency-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
 
-import { FILE_EXTENSIONS } from '../constants'
+import { FILE_EXTENSIONS } from '../constants.js'
 
 import type { Configuration, WebpackPluginInstance } from 'webpack'
-import type { ConfigurationFnc } from '../types'
+import type { ConfigurationFnc } from '../types.js'
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const { HotModuleReplacementPlugin } = webpack
 
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)

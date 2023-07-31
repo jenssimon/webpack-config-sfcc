@@ -1,4 +1,4 @@
-import type { SFCCWebpackConfigOptions } from './types'
+import type { SFCCWebpackConfigOptions } from './types.js'
 
 /**
  * Default configuration for development builds.

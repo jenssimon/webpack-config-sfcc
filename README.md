@@ -84,15 +84,23 @@ This is a battle-proof Webpack configuration used and matured in multiple Salesf
 Add a `webpack.config.js` file in your project root. This is the configuration for the development environment.
 
 ```javascript
-const { generateConfiguration, DEFAULT_DEVELOPMENT } = require('@jenssimon/webpack-config-sfcc');
-const cartridges = require('./webpack.cartridges');
+import { fileURLToPath } from 'node:url'
+import path from 'node:path'
+import { createRequire } from 'node:module'
 
-module.exports = () => Object.entries(cartridges).map(([cartridge, config]) => generateConfiguration(cartridge, {
-  dirname: __dirname,
+import { generateConfiguration, DEFAULT_DEVELOPMENT } from '@jenssimon/webpack-config-sfcc'
+import cartridges from './webpack.cartridges.js'
+
+const require = createRequire(import.meta.url)
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
+
+export default () => Object.entries(cartridges).map(([cartridge, config]) => generateConfiguration(cartridge, {
+  dirname,
   resolver: require.resolve,
   ...DEFAULT_DEVELOPMENT,
   ...config,
-}));
+}))
 ```
 
 ### `webpack.config.prod.js`
@@ -103,14 +111,14 @@ Add a `webpack.config.prod.js` file in your project root. This is the configurat
 /**
  * Webpack configuration for production build.
  */
-const { generateConfiguration, DEFAULT_PRODUCTION } = require('@jenssimon/webpack-config-sfcc');
-const cartridges = require('./webpack.cartridges');
+import { generateConfiguration, DEFAULT_PRODUCTION } from '@jenssimon/webpack-config-sfcc'
+import cartridges from './webpack.cartridges.js'
 
-module.exports = (env) => Object.entries(cartridges).map(([cartridge, config]) => generateConfiguration(cartridge, {
+export default (env) => Object.entries(cartridges).map(([cartridge, config]) => generateConfiguration(cartridge, {
   ...DEFAULT_PRODUCTION,
   ...config,
   env,
-}));
+}))
 ```
 
 ### `webpack.cartridges.js`
@@ -118,14 +126,14 @@ module.exports = (env) => Object.entries(cartridges).map(([cartridge, config]) =
 Add a `webpack.cartridges.js` file in yout project root. This files contains specific additional configuration for each storefront cartridge within your project.
 
 ```javascript
-module.exports = {
+export default {
   app_storefront_foo: {
     // special configuration for `app_storefront_foo`
   },
   app_storefront_bar: {
     // special configuration for `app_storefront_bar`
   },
-};
+}
 ```
 
 Those configurations can contain additional Webpack rules, aliases, ... For more details see the configuration section.
@@ -142,8 +150,16 @@ Required
 Just add
 
 ```javascript
+import { fileURLToPath } from 'node:url'
+import path from 'node:path'
+
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
+
+// ...
+
 {
-  dirname: __dirname,
+  dirname,
   // ...
 }
 ```
@@ -158,6 +174,12 @@ Required
 Just add
 
 ```javascript
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+
+// ...
+
 {
   resolver: require.resolve,
   // ...

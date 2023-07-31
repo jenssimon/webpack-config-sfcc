@@ -1,5 +1,5 @@
 import type { Configuration } from 'webpack'
-import type { ConfigurationFnc } from '../types'
+import type { ConfigurationFnc } from '../types.js'
 
 /**
  * The output configuration. (see https://webpack.js.org/configuration/output/)
