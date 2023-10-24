@@ -27,10 +27,8 @@ const resolve: ConfigurationFnc<Configuration['resolve']> = (_cartridge, { alias
   },
   extensions: RESOLVE_FILE_EXTENSIONS,
   extensionAlias: {
-    /* eslint-disable @typescript-eslint/naming-convention */
     '.js': ['.ts', '.js'],
     '.mjs': ['.mts', '.mjs'],
-    /* eslint-enable @typescript-eslint/naming-convention */
   },
 })
 

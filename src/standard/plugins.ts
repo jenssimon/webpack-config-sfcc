@@ -10,7 +10,6 @@ import { FILE_EXTENSIONS } from '../constants.js'
 import type { Configuration, WebpackPluginInstance } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 const { HotModuleReplacementPlugin } = webpack
 
 /**
