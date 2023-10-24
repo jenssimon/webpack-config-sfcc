@@ -13,7 +13,7 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
       },
     },
     proxy: {
-      '*': { // eslint-disable-line @typescript-eslint/naming-convention
+      '*': {
         target: `https://${hostname}/`,
         secure: false,
         changeOrigin: true,
