@@ -821,8 +821,8 @@ __metadata:
   linkType: hard
 
 "@jenssimon/eslint-config-base@npm:^7.3.1":
-  version: 7.3.9
-  resolution: "@jenssimon/eslint-config-base@npm:7.3.9"
+  version: 7.3.10
+  resolution: "@jenssimon/eslint-config-base@npm:7.3.10"
   dependencies:
     eslint-config-airbnb: "npm:^19.0.4"
     eslint-config-airbnb-base: "npm:^15.0.0"
@@ -839,12 +839,12 @@ __metadata:
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-redux: "npm:^4.0.0"
-    eslint-plugin-sonarjs: "npm:^0.22.0"
+    eslint-plugin-sonarjs: "npm:^0.23.0"
     eslint-plugin-unicorn: "npm:^49.0.0"
     eslint-plugin-wc: "npm:^2.0.4"
   peerDependencies:
     eslint: ^7.32.0 || ^8.2.0
-  checksum: a9678129be080152363778974aa91ff93511eb5ae9925048225982aa41394af2ec1c3b16baa908eb1350bd82e2aa04a0283a27d6642c75184e0e9ac6bf54adc1
+  checksum: 9b9e7e2be6ce614d7fb8a418ca5323f70f181083dfe86e1609955868b56baea2745ac1328e8768339fa1223bb41bb9ac6795f652c7ee3295dfcc0fbee4e73c24
   languageName: node
   linkType: hard
 
@@ -4614,12 +4614,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-sonarjs@npm:^0.22.0":
-  version: 0.22.0
-  resolution: "eslint-plugin-sonarjs@npm:0.22.0"
+"eslint-plugin-sonarjs@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "eslint-plugin-sonarjs@npm:0.23.0"
   peerDependencies:
     eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 8802ed5075bb388a0390be862c43349d40b3d4c37ed542add81909fa7dc98058572fecd1dc4742ebd0f0ff122a97b6e5be664824e58fccc600569783a9ebe97f
+  checksum: 1cfe063a979ab139b4fd75fcb8c9a478c5a43c3bb3126faffe19192c28ae199fab6570da01b6ed6430cdf52e2d79a93079105af2c568db5d029d312beea41a60
   languageName: node
   linkType: hard
 
