@@ -849,8 +849,8 @@ __metadata:
   linkType: hard
 
 "@jenssimon/eslint-config-typescript@npm:^5.2.2":
-  version: 5.2.4
-  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.4"
+  version: 5.2.5
+  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.5"
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^6.8.0"
     "@typescript-eslint/parser": "npm:^6.8.0"
@@ -858,7 +858,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     typescript: ">=4.0.0"
-  checksum: 85745d203dab40694e9fe3e183ec9f89a79309f66d688a0f9d5dc221731744c46cb34d5b980effe6ab40c331b5d9683ac9763119bc295717a740867257bedffa
+  checksum: 2856aaf6f9d59784c7a5c8be3b815543fab5ae032b96fd823cd9019dbfacb7e7678038b1e138b2460731e05393554923aa69ba5162c4a2308d357a722d329163
   languageName: node
   linkType: hard
 
