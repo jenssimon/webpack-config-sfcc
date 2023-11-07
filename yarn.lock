@@ -1282,11 +1282,11 @@ __metadata:
   linkType: hard
 
 "@types/case-sensitive-paths-webpack-plugin@npm:^2.1.8":
-  version: 2.1.8
-  resolution: "@types/case-sensitive-paths-webpack-plugin@npm:2.1.8"
+  version: 2.1.9
+  resolution: "@types/case-sensitive-paths-webpack-plugin@npm:2.1.9"
   dependencies:
     "@types/webpack": "npm:^4"
-  checksum: 9c52c889053c7cfa3242cd00fe88827acc57b6e82350edf395ae0045e6a824ccb52bce70fbbf897e478ccead791aecb6379011228626cc62dd52a284867ec8c4
+  checksum: 5901392052518faa6a105aff1ec8b9777eaf51d72b2575c00ac75ab34260a0452768872864b85fa025dd62141e75e981bc85b23c10207e7098b1aed71b5dca6e
   languageName: node
   linkType: hard
 
