@@ -1474,20 +1474,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^20.0.0":
-  version: 20.8.10
-  resolution: "@types/node@npm:20.8.10"
+  version: 20.9.0
+  resolution: "@types/node@npm:20.9.0"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 8930039077c8ad74de74c724909412bea8110c3f8892bcef8dda3e9629073bed65632ee755f94b252bcdae8ca71cf83e89a4a440a105e2b1b7c9797b43483049
+  checksum: a934f7645ed117a27857147403b0c657ffbca578c8f280e4c21d27dfb43e58dc4f24c4319d4335b8a4fa08e28fb2dc905a5bd5e4bc8878047164c56c1b162139
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.11.9":
-  version: 18.18.8
-  resolution: "@types/node@npm:18.18.8"
+  version: 18.18.9
+  resolution: "@types/node@npm:18.18.9"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 25346cda374c3bb630a9055cf8b7dd49729d53502b81ba647336f459c751f66c73ae9ba755a63d7bd05b07afa2c90b5627af985998ef5cdb0bafb2db5ec7b520
+  checksum: ebd98b117c868edc597807cd0dab214b6110b9cd5ee406632641d0cf5b8bd7cb199caaac657a046d9203c441dbcfb3c71154ffa2d615ec89f80e6972143e6ec8
   languageName: node
   linkType: hard
 
@@ -1614,8 +1614,8 @@ __metadata:
   linkType: hard
 
 "@types/webpack@npm:^4":
-  version: 4.41.33
-  resolution: "@types/webpack@npm:4.41.33"
+  version: 4.41.36
+  resolution: "@types/webpack@npm:4.41.36"
   dependencies:
     "@types/node": "npm:*"
     "@types/tapable": "npm:^1"
@@ -1623,18 +1623,18 @@ __metadata:
     "@types/webpack-sources": "npm:*"
     anymatch: "npm:^3.0.0"
     source-map: "npm:^0.6.0"
-  checksum: 4599e27b9a0531fc107de50011bb3e690f6aaa71948d5fa11527f13965a281592169af8e768386ab2f54fce00dd9949aa6190f81f2c1d3213d38381f58107356
+  checksum: d143f2760bf1484079aa5684e58a0b3edcfac051f2f968ea07adccc705aee75883961a5bb86ce3ae9669f72c985d13756ce849200b71a350275dbb1b54482146
   languageName: node
   linkType: hard
 
 "@types/webpack@npm:^5.28.4":
-  version: 5.28.4
-  resolution: "@types/webpack@npm:5.28.4"
+  version: 5.28.5
+  resolution: "@types/webpack@npm:5.28.5"
   dependencies:
     "@types/node": "npm:*"
     tapable: "npm:^2.2.0"
     webpack: "npm:^5"
-  checksum: 7a08e31096a05c77bb49b3830f85f2e340090fa2b19dbe4681c7eab92e49db85bdbbe7b374df7d7aa38549922ff3252f43a00d4c5c2f9fe0c2a198cdb5ddde7e
+  checksum: 14359d9ccecef7ef1ea271c00baec5337213c7fda63a34c61b9e519505b3928d0807cdbb5b1172d1994e1179920b89c57eaf2cbf64599958b67cd70720ac2a9b
   languageName: node
   linkType: hard
 
