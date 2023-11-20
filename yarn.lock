@@ -849,8 +849,8 @@ __metadata:
   linkType: hard
 
 "@jenssimon/eslint-config-typescript@npm:^5.2.2":
-  version: 5.2.6
-  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.6"
+  version: 5.2.7
+  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.7"
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^6.8.0"
     "@typescript-eslint/parser": "npm:^6.8.0"
@@ -858,7 +858,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     typescript: ">=4.0.0"
-  checksum: d50f0dac63bb8b92dd56a8cfd9c0d6e9606e4ef598e636983d71697617cb137b6aa018d5ac1f3f3e9928750d74df0cf43d961f31c7a357774d25c997678b6324
+  checksum: 99f36fbbf40dae9a805b7d501f17a84575548914a997d3df6713bf38e2deb85af659c711aebeb39213f8661161be88994c0d00f9f5a914f0efed5c3c8c221bde
   languageName: node
   linkType: hard
 
@@ -10442,12 +10442,12 @@ __metadata:
   linkType: hard
 
 "typescript@npm:^5.2.2":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
+  version: 5.3.2
+  resolution: "typescript@npm:5.3.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d65e50eb849bd21ff8677e5b9447f9c6e74777e346afd67754934264dcbf4bd59e7d2473f6062d9a015d66bd573311166357e3eb07fea0b52859cf9bb2b58555
+  checksum: 415e5fb6611f5713e460bad48039f00bcfdbde53a2f911727862d5aa9c5d5edd250059a419df382d8f031709e15a169c41eb62b6a401da5eec7ac0f4e359d6ac
   languageName: node
   linkType: hard
 
@@ -10462,12 +10462,12 @@ __metadata:
   linkType: hard
 
 "typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+  version: 5.3.2
+  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
+  checksum: 1b45cdfb577a78ae7a9a9d0b77a7b772142cb98ba05e4e5aefba7044a028ded885bcecef63166407a5986645cea816fe4986894336aacd5e791796ea79a6a7ed
   languageName: node
   linkType: hard
 
