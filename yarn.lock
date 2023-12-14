@@ -8260,14 +8260,14 @@ __metadata:
   linkType: hard
 
 "postcss-merge-longhand@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "postcss-merge-longhand@npm:6.0.0"
+  version: 6.0.1
+  resolution: "postcss-merge-longhand@npm:6.0.1"
   dependencies:
     postcss-value-parser: "npm:^4.2.0"
-    stylehacks: "npm:^6.0.0"
+    stylehacks: "npm:^6.0.1"
   peerDependencies:
-    postcss: ^8.2.15
-  checksum: 807760c96b2f7b9cc21ab3b0c350c80c7dd77226b9aafff9485b0d0629926952a7e60b8ef7d5722af06517dc6e8bec62aed305d78b1d9f90971d22ba31f82589
+    postcss: ^8.4.31
+  checksum: 265b9132ff9069431b95a58d0a830ce6d6e722b678240dea2a4df6a41b15e3814b18a42b4b205ad4c569471c628094e4f3d57185c8ff9956cc9d6997dfc3cb4d
   languageName: node
   linkType: hard
 
@@ -9989,15 +9989,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylehacks@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "stylehacks@npm:6.0.0"
+"stylehacks@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "stylehacks@npm:6.0.1"
   dependencies:
     browserslist: "npm:^4.21.4"
     postcss-selector-parser: "npm:^6.0.4"
   peerDependencies:
-    postcss: ^8.2.15
-  checksum: 95c31f29b339f09d38b7bf78e3b7b4de01ecf06217d59a62e44f4f59abb8569483ba36952000516ae28cfc0fdf26b69c11fab65fdb36cef611725fd04ac9bdf3
+    postcss: ^8.4.31
+  checksum: 4f8b12dbb6e9a6ee0bb869d87f3761b86aafbae14904b7a2057e166ea6dabe24065e229f2161c47449740fe94ec66c9aac826cdf74730547210bc1d1e3e56f06
   languageName: node
   linkType: hard
 
