@@ -36,7 +36,7 @@ const css: ConfigurationFnc<RuleSetRule[]> = () => [
         options: {
           postcssOptions: {
             plugins: [
-              postcssPresetEnv,
+              postcssPresetEnv(),
               postcssMergeLonghand,
               autoprefixer(),
               // ...additionalPostCSSPluginsInt,
