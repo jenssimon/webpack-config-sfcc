@@ -881,7 +881,6 @@ __metadata:
     "@types/css-minimizer-webpack-plugin": "npm:^3.2.1"
     "@types/mini-css-extract-plugin": "npm:^2.5.1"
     "@types/node": "npm:^20.0.0"
-    "@types/postcss-preset-env": "npm:^8.0.0"
     "@types/sass": "npm:^1.45.0"
     "@types/webpack": "npm:^5.28.4"
     autoprefixer: "npm:^10.4.16"
@@ -1430,15 +1429,6 @@ __metadata:
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
   checksum: 10/65dff72b543997b7be8b0265eca7ace0e34b75c3e5fee31de11179d08fa7124a7a5587265d53d0409532ecb7f7fba662c2012807963e1f9b059653ec2c83ee05
-  languageName: node
-  linkType: hard
-
-"@types/postcss-preset-env@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "@types/postcss-preset-env@npm:8.0.0"
-  dependencies:
-    postcss-preset-env: "npm:*"
-  checksum: 10/59317e9c66416fa4cc9fdbf7b812906521c052844231ef098a9e4f39600a552d0cd6e8436eb86692812dbca6ad905db167b55879939438330afbab1e8972d5f1
   languageName: node
   linkType: hard
 
@@ -7898,7 +7888,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:*, postcss-preset-env@npm:^9.2.0":
+"postcss-preset-env@npm:^9.2.0":
   version: 9.4.0
   resolution: "postcss-preset-env@npm:9.4.0"
   dependencies:
