@@ -41,7 +41,7 @@
     "postcss-merge-longhand": "^7.0.0",
     "postcss-preset-env": "^9.2.0",
     "sass": "1.77.2",
-    "sass-loader": "^14.0.0",
+    "sass-loader": "^15.0.0",
     "swc-loader": "^0.2.3",
     "webpack-remove-empty-scripts": "^1.0.4",
     "yaml": "^2.3.3"
