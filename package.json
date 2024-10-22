@@ -75,7 +75,6 @@
   "eslintConfig": {
     "extends": [
       "@jenssimon/base",
-      "@jenssimon/typescript",
       "plugin:import-esm/recommended"
     ],
     "parserOptions": {
@@ -85,7 +84,20 @@
     "rules": {
       "@typescript-eslint/naming-convention": "off",
       "import/no-unresolved": "off"
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.ts"
+        ],
+        "extends": [
+          "@jenssimon/typescript"
+        ],
+        "rules": {
+          "@typescript-eslint/naming-convention": "off"
+        }
+      }
+    ]
   },
   "config": {
     "commitizen": {
