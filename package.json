@@ -40,7 +40,7 @@
     "postcss-loader": "^8.0.0",
     "postcss-merge-longhand": "^7.0.0",
     "postcss-preset-env": "^10.0.0",
-    "sass": "1.77.2",
+    "sass": "1.80.3",
     "sass-loader": "^14.0.0",
     "swc-loader": "^0.2.3",
     "webpack-remove-empty-scripts": "^1.0.4",
@@ -100,5 +100,5 @@
       "main"
     ]
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.5.1"
 }
