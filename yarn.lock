@@ -885,8 +885,8 @@ __metadata:
   linkType: hard
 
 "@jenssimon/eslint-config-base@npm:^7.3.1":
-  version: 7.4.43
-  resolution: "@jenssimon/eslint-config-base@npm:7.4.43"
+  version: 7.4.45
+  resolution: "@jenssimon/eslint-config-base@npm:7.4.45"
   dependencies:
     eslint-config-airbnb: "npm:^19.0.4"
     eslint-config-airbnb-base: "npm:^15.0.0"
@@ -908,13 +908,13 @@ __metadata:
     eslint-plugin-wc: "npm:^2.0.4"
   peerDependencies:
     eslint: ^7.32.0 || ^8.2.0
-  checksum: 10/22734fe49ad84b97a610140e665f535d0f3c21f88763a0519d318a54c85f8c7bb65c35f50c1a8515231e63db2bc37284d69bb776b29b6db7fda654bd4de17c27
+  checksum: 10/aba6e2b8b7712636e8b8710cc1e98a3d4aff6f7089988826f0902a00cbcffb08f1266180e45ce11bdfad10d63757d50fba9f668b9a5192ad397f592bd3b06212
   languageName: node
   linkType: hard
 
 "@jenssimon/eslint-config-typescript@npm:^5.2.2":
-  version: 5.3.23
-  resolution: "@jenssimon/eslint-config-typescript@npm:5.3.23"
+  version: 5.3.24
+  resolution: "@jenssimon/eslint-config-typescript@npm:5.3.24"
   dependencies:
     "@stylistic/eslint-plugin-ts": "npm:^2.6.1"
     "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
@@ -923,7 +923,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     typescript: ">=4.0.0"
-  checksum: 10/a3626208344129aacd203ee6b2cf8a944df64cf5951a77f795db251ad9fda81d195b5bb58023e584551d2d10ce95abb92ecbb823e7aee94928993b2fc3404f6a
+  checksum: 10/683995a7f9221a59b92f273b1b096447765a6fdf4a88a4b1f379729023d6a6f2c77212e669569966aa0309623a78c89bc34ee8ce23cc08c2d8052dd1fa62974a
   languageName: node
   linkType: hard
 
@@ -1635,11 +1635,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^22.0.0":
-  version: 22.9.3
-  resolution: "@types/node@npm:22.9.3"
+  version: 22.10.1
+  resolution: "@types/node@npm:22.10.1"
   dependencies:
-    undici-types: "npm:~6.19.8"
-  checksum: 10/c32a03ff998b8c6cf7d653216508a92b1e6569dd5031ea6cfc2aaa8c75ebbf4172bf1602f0e1f673086e210787dc96667b99ba4d919bc151f9a1f88aeac42822
+    undici-types: "npm:~6.20.0"
+  checksum: 10/c802a526da2f3fa3ccefd00a71244e7cb825329951719e79e8fec62b1dbc2855388c830489770611584665ce10be23c05ed585982038b24924e1ba2c2cce03fd
   languageName: node
   linkType: hard
 
@@ -9956,10 +9956,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.8":
-  version: 6.19.8
-  resolution: "undici-types@npm:6.19.8"
-  checksum: 10/cf0b48ed4fc99baf56584afa91aaffa5010c268b8842f62e02f752df209e3dea138b372a60a963b3b2576ed932f32329ce7ddb9cb5f27a6c83040d8cd74b7a70
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10/583ac7bbf4ff69931d3985f4762cde2690bb607844c16a5e2fbb92ed312fe4fa1b365e953032d469fa28ba8b224e88a595f0b10a449332f83fa77c695e567dbe
   languageName: node
   linkType: hard
 
