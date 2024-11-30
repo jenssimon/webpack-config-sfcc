@@ -46,7 +46,7 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
   new ESLintPlugin({
     extensions: FILE_EXTENSIONS,
     fix: true,
-    lintDirtyModulesOnly: true, // TODO
+    lintDirtyModulesOnly: true,
   }),
 
   ...additionalPlugins as unknown as WebpackPluginInstance[],
