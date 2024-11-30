@@ -106,34 +106,16 @@ export interface SFCCWebpackConfigOptions {
    */
   devServer: boolean
 
-  /**
-   * TODO
-   */
   env?: Record<string, string | boolean>
 
-  /**
-   * TODO
-   */
   site?: string
 
-  /**
-   * TODO
-   */
   locale?: string
 
-  /**
-   * TODO
-   */
   hostname?: string
 
-  /**
-   * TODO
-   */
   publicPath?: string
 
-  /**
-   * TODO
-   */
   hmrPath?: string
 
   /**
@@ -147,13 +129,9 @@ export interface SFCCWebpackConfigOptions {
    * Loaders executed before `mini-css-extract-plugin` loader.
    *
    * Default: `[]`
-   * TODO
    */
   preCSSExtractLoaders: string[]
 
-  /**
-   * TODO
-   */
   additionalPlugins: ((this: Compiler, compiler: Compiler) => void) | WebpackPluginInstance[]
 
   /**
@@ -161,14 +139,8 @@ export interface SFCCWebpackConfigOptions {
    */
   additionalEntries?: EntryObject
 
-  /**
-   * TODO
-   */
   additionalPostCSSPlugins: AcceptedPlugin[]
 
-  /**
-   * TODO
-   */
   additionalDefine: Record<string, unknown>
 
   /**
@@ -179,9 +151,6 @@ export interface SFCCWebpackConfigOptions {
    */
   noLint: boolean
 
-  /**
-   * TODO
-   */
   onlyCartridge?: string
 
   /**

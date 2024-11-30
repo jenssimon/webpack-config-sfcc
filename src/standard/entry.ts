@@ -19,9 +19,6 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
       `webpack-hot-middleware/client?path=__webpack_hmr_${hmrPath}&reload=true`,
     ] : [],
 
-    // Add polyfills for all targets
-    // 'app_xxx_core/polyfills.js', // TODO
-
     // and finally the main entry point
     `./cartridges/${cartridge}/cartridge/client/default/js/${entryPoint}`,
   ],
