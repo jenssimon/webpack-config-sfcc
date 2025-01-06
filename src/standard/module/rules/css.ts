@@ -7,6 +7,7 @@ import postcssMergeLonghand from 'postcss-merge-longhand'
 import type { RuleSetRule } from 'webpack'
 import type { ConfigurationFnc } from '../../../types.js'
 
+
 /**
  * Rules to transform CSS.
  *
@@ -59,5 +60,6 @@ const css: ConfigurationFnc<RuleSetRule[]> = () => [
     ],
   },
 ]
+
 
 export default css

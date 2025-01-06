@@ -1,6 +1,7 @@
 import type { RuleSetRule } from 'webpack'
 import type { ConfigurationFnc } from '../../../types.js'
 
+
 /**
  * Rules to transpile JavaScript and TypeScript files using swc (https://swc.rs/).
  *
@@ -52,5 +53,6 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
     swcConfig(/\.ts$/, 'typescript'),
   ]
 }
+
 
 export default swc

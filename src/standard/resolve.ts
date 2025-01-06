@@ -3,6 +3,7 @@ import { RESOLVE_FILE_EXTENSIONS } from '../constants.js'
 import type { Configuration } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
 /**
  * The resolve configuration. (see https://webpack.js.org/configuration/resolve/)
  */
@@ -14,8 +15,9 @@ const resolve: ConfigurationFnc<Configuration['resolve']> = (_cartridge, { alias
 
       // custom aliases
       ...aliasCartridges ?? [],
-    ].reduce((acc, { cartridge, alias: cartridgeAlias, noStyle }) => ({
-      ...acc,
+    // eslint-disable-next-line unicorn/no-array-reduce
+    ].reduce((accumulator, { cartridge, alias: cartridgeAlias, noStyle }) => ({
+      ...accumulator,
       [cartridgeAlias]: `${dirname}/cartridges/${cartridge}/cartridge/client/default/js`,
       ...noStyle ? {} : {
         // I will not comment why we use the -css postfix. Spoiler: Really hackish!
@@ -31,5 +33,6 @@ const resolve: ConfigurationFnc<Configuration['resolve']> = (_cartridge, { alias
     '.mjs': ['.mts', '.mjs'],
   },
 })
+
 
 export default resolve

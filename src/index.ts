@@ -1,9 +1,12 @@
+/* eslint-disable unicorn/prefer-export-from */
+
 /**
  * A shared Webpack configuration for Salesforce Commerce Cloud (SFCC) projects.
  */
 import generateConfiguration from './standard/index.js'
 
 import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults.js'
+
 
 export {
   /**

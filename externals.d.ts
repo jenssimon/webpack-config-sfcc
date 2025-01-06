@@ -3,12 +3,14 @@ declare module 'postcss-merge-longhand' {
   export = postcssMergeLonghand
 }
 
+
 declare module 'postcss-strip-zero-length-units' {
   const postcssStripZeroLengthUnits: postcss.AcceptedPlugin
   export = postcssStripZeroLengthUnits
 }
 
+
 declare module 'postcss-preset-env' {
-  const postcssPresetEnv: postcss.AcceptedPlugin
-  export = postcssPresetEnv
+  const postcssPresetEnvironment: postcss.AcceptedPlugin
+  export = postcssPresetEnvironment
 }

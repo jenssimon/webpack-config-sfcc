@@ -1,11 +1,12 @@
 import type { Configuration } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
 /**
  * The entry point configuation (see https://webpack.js.org/configuration/entry-context/#entry)
  */
 const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
-  devServer = false,
+  devServer = false, // eslint-disable-line unicorn/prevent-abbreviations
   hmrPath,
   entryPoint,
   entryName,
@@ -24,5 +25,6 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
   ],
   ...additionalEntries,
 })
+
 
 export default entry

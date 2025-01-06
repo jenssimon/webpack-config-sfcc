@@ -1,6 +1,7 @@
 import type { Configuration } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
 /**
  * The output configuration. (see https://webpack.js.org/configuration/output/)
  */
@@ -16,5 +17,6 @@ const output: ConfigurationFnc<Configuration['output']> = (cartridge: string, {
     : undefined,
   clean: production,
 })
+
 
 export default output

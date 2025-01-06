@@ -1,6 +1,10 @@
+/* eslint-disable unicorn/filename-case */
+// eslint-disable-next-line unicorn/prevent-abbreviations
 import type { WebpackOptionsNormalized } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
 const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> = (cartridge, {
   devServer, site, locale, hostname,
 }) => (devServer
@@ -30,15 +34,16 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
           site
         }-Site/-/${locale}/:hash(v(\\w{0,}))/:staticfile(\\S*)`,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (req: any, res: any) => {
-          res.redirect(`/on/demandware.static/Sites-${
+        (request: any, response: any) => {
+          response.redirect(`/on/demandware.static/Sites-${
             site
-          }-Site/-/${locale}/${req.params.staticfile}`)
+          }-Site/-/${locale}/${request.params.staticfile}`)
         },
       )
       return middlewares
     },
   }
   : undefined)
+
 
 export default devServerConfig
