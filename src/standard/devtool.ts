@@ -1,6 +1,7 @@
 import type { Configuration } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
 /**
  * Devtool configuration (see https://webpack.js.org/configuration/devtool/)
  *
@@ -14,5 +15,6 @@ const devtool: ConfigurationFnc<Configuration['devtool']> = (cartridge, { source
   }
   return theDevtool
 }
+
 
 export default devtool

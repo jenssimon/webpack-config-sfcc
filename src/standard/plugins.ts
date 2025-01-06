@@ -10,7 +10,9 @@ import { FILE_EXTENSIONS } from '../constants.js'
 import type { Configuration, WebpackPluginInstance } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
 const { HotModuleReplacementPlugin } = webpack
+
 
 /**
  * The plugins configuration. (see https://webpack.js.org/configuration/plugins/)
@@ -31,11 +33,11 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
   // Extract CSS files from JS bundle
   new MiniCssExtractPlugin({
     filename: (pathData) => {
-      const ret = '../css/[name].css'
+      const returnValue = '../css/[name].css'
       const cssPostfix = '-css'
       return pathData.chunk?.name?.endsWith(cssPostfix)
-        ? ret.replace('[name]', pathData.chunk.name.slice(0, -cssPostfix.length))
-        : ret
+        ? returnValue.replace('[name]', pathData.chunk.name.slice(0, -cssPostfix.length))
+        : returnValue
     },
     // chunkFilename: '../css/[name].css',
   }) as unknown as WebpackPluginInstance,
@@ -56,5 +58,6 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
     new HotModuleReplacementPlugin() as unknown as WebpackPluginInstance,
   ] : [],
 ]
+
 
 export default plugins

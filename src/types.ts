@@ -3,6 +3,7 @@ import type {
 } from 'webpack'
 import type { AcceptedPlugin } from 'postcss'
 
+
 /**
  * Configuration for cartridge aliases.
  */
@@ -23,6 +24,7 @@ export interface CartridgeAliasConfig {
    */
   noStyle?: boolean
 }
+
 
 /**
  * Configuration options for the Webpack configuration.
@@ -237,11 +239,13 @@ export interface SFCCWebpackConfigOptions {
   allowCircularDependendies: boolean
 }
 
+
 /**
  * A function which generates a Webpack config section.
  */
 export type ConfigurationFnc<T> = (cartridge: string, options: SFCCWebpackConfigOptions) => T;
 
+
 export type WebpackConfigurationGenerator = (
-  cartridge: string, opts: Partial<SFCCWebpackConfigOptions>
+  cartridge: string, options: Partial<SFCCWebpackConfigOptions>
 ) => WebpackOptionsNormalized;

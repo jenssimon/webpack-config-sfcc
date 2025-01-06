@@ -5,12 +5,13 @@ import { parse } from 'yaml'
 import type { WebpackOptionsNormalized } from 'webpack'
 import type { ConfigurationFnc, SFCCWebpackConfigOptions } from './types.js'
 
+
 /**
  * Process options, add defaults and validate.
  */
-const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigOptions => {
-  if (!opts.dirname) throw new Error('"dirname" option is mandatory. Please use "__dirname" as value.')
-  if (!opts.resolver) throw new Error('"resolver" option is mandatory. Please use "require.resolve" as value.')
+const getOptions = (options: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigOptions => {
+  if (!options.dirname) throw new Error('"dirname" option is mandatory. Please use "__dirname" as value.')
+  if (!options.resolver) throw new Error('"resolver" option is mandatory. Please use "require.resolve" as value.')
 
   const defaults: Omit<SFCCWebpackConfigOptions, 'dirname' | 'resolver'> = {
     sourceMap: false,
@@ -31,7 +32,8 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     allowCircularDependendies: false,
   }
 
-  const devServer = opts?.env?.WEBPACK_SERVE === true
+  // eslint-disable-next-line unicorn/prevent-abbreviations
+  const devServer = options?.env?.WEBPACK_SERVE === true
 
   let hostname: string | undefined
   let site: string | undefined
@@ -51,7 +53,7 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
 
   return {
     ...defaults,
-    ...opts,
+    ...options,
 
     devServer,
 
@@ -60,6 +62,7 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
     hostname,
   } as SFCCWebpackConfigOptions
 }
+
 
 /**
  * Generates a Webpack configuration by using an array of configuration functions which create webpack config sections.
@@ -72,18 +75,20 @@ const getOptions = (opts: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConfigO
 export const generateWebpackConfiguration = (
   sections: { [index: string]: ConfigurationFnc<unknown> },
   cartridge: string,
-  opts: Partial<SFCCWebpackConfigOptions>,
+  options: Partial<SFCCWebpackConfigOptions>,
 ): WebpackOptionsNormalized => {
-  const options = getOptions(opts)
+  const intOptions = getOptions(options)
 
   return Object
     .entries(sections)
-    .reduce((prev, [key, value]) => {
+    // eslint-disable-next-line unicorn/no-array-reduce
+    .reduce((previous, [key, value]) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (prev as any)[key] = value(cartridge, options)
-      return prev
+      (previous as any)[key] = value(cartridge, intOptions)
+      return previous
     }, {}) as WebpackOptionsNormalized
 }
+
 
 /**
  * Change the name of the chunks. There are several problems with the default naming (like too long names).

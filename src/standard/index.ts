@@ -8,9 +8,10 @@ import devtool from './devtool.js'
 import resolve from './resolve.js'
 import plugins from './plugins.js'
 import optimization from './optimization.js'
-import devServer from './devServer.js'
+import devServer from './devServer.js' // eslint-disable-line unicorn/prevent-abbreviations
 
 import type { WebpackConfigurationGenerator } from '../types.js'
+
 
 /**
  * Generate a Webpack configuration for a cartridge using the given options.
@@ -18,7 +19,7 @@ import type { WebpackConfigurationGenerator } from '../types.js'
  * @param cartridge the name of the cartridge
  * @param opts The options
  */
-const generateConfiguration: WebpackConfigurationGenerator = (...args) => generateWebpackConfiguration({
+const generateConfiguration: WebpackConfigurationGenerator = (...arguments_) => generateWebpackConfiguration({
   mode,
   entry,
   output,
@@ -28,6 +29,7 @@ const generateConfiguration: WebpackConfigurationGenerator = (...args) => genera
   plugins,
   optimization,
   devServer,
-}, ...args)
+}, ...arguments_)
+
 
 export default generateConfiguration

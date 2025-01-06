@@ -4,6 +4,7 @@ import cssRules from './module/rules/css.js'
 import type { Configuration } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
+
 /**
  * The module configuration. (see https://webpack.js.org/configuration/module/)
  */
@@ -18,5 +19,6 @@ const theModule: ConfigurationFnc<Configuration['module']> = (cartridge, options
     ...options.projectSpecificRules,
   ],
 })
+
 
 export default theModule
