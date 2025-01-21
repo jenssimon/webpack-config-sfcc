@@ -15,7 +15,7 @@ export const TS_FILE_EXTENSIONS = ['.ts', '.tsx']
 
 
 /**
- * All JavaScript and TypeScript file extensions combined
+ * All JavaScript and TypeScript file extensions combinedxx
  */
 export const FILE_EXTENSIONS = [
   ...JS_FILE_EXTENSIONS,
