@@ -62,7 +62,7 @@ export interface SFCCWebpackConfigOptions {
    * }
    * ```
    */
-  resolver: RequireResolve
+  resolver: NodeJS.RequireResolve
 
   /**
    * The entrypoint of the application.
