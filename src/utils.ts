@@ -73,7 +73,7 @@ const getOptions = (options: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConf
  * @returns a Webpack config containing the generated config sections
  */
 export const generateWebpackConfiguration = (
-  sections: { [index: string]: ConfigurationFnc<unknown> },
+  sections: Record<string, ConfigurationFnc<unknown>>,
   cartridge: string,
   options: Partial<SFCCWebpackConfigOptions>,
 ): WebpackOptionsNormalized => {

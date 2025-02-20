@@ -13,7 +13,7 @@ const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
   additionalEntries,
 }) => ({
   // The main entry point of the application
-  [entryName as string]: [
+  [entryName!]: [
 
     // Modules needed fot Hot Module Replacement
     ...(devServer && hmrPath) ? [

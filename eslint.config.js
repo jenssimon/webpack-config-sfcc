@@ -1,6 +1,8 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import tseslint from 'typescript-eslint'
+
 import { FlatCompat } from '@eslint/eslintrc'
 import { fixupConfigRules } from '@eslint/compat'
 
@@ -14,7 +16,7 @@ const compat = new FlatCompat({
 })
 
 
-export default [
+export default tseslint.config(
   {
     ignores: [
       '.yarn/',
@@ -24,31 +26,24 @@ export default [
   },
 
   ...fixupConfigRules(compat.config({
-    parserOptions: {
-      project: 'tsconfig.json',
-    },
     extends: [
       '@jenssimon/base',
       'plugin:import-esm/recommended',
     ],
-    overrides: [
-      {
-        files: [
-          '*.ts',
-        ],
-        extends: [
-          '@jenssimon/typescript',
-        ],
-        rules: {
-          '@typescript-eslint/naming-convention': 'off',
-        },
-      },
-    ],
-  })).map((rule) => ({
-    files: [
-      '**/*.js',
-      '**/*.ts',
-    ],
-    ...rule,
   })),
-]
+
+  tseslint.configs.recommended,
+  tseslint.configs.stylisticTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: [
+            '*.js',
+          ],
+        },
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+)

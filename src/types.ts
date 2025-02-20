@@ -180,7 +180,7 @@ export interface SFCCWebpackConfigOptions {
      * Redirect only exact matching request.
      */
     onlyModule?: boolean
-  }[] | { [index: string]: string | false | string[] }
+  }[] | Record<string, string | false | string[]>
 
   /**
    * Cartridges that needs an alias configuration.
