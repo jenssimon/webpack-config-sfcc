@@ -2222,7 +2222,7 @@ __metadata:
     postcss-loader: "npm:^8.0.0"
     postcss-merge-longhand: "npm:^7.0.0"
     postcss-preset-env: "npm:^10.0.0"
-    sass: "npm:1.88.0"
+    sass: "npm:1.89.0"
     sass-loader: "npm:^16.0.0"
     swc-loader: "npm:^0.2.3"
     typescript: "npm:^5.2.2"
@@ -9852,9 +9852,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.88.0":
-  version: 1.88.0
-  resolution: "sass@npm:1.88.0"
+"sass@npm:1.89.0":
+  version: 1.89.0
+  resolution: "sass@npm:1.89.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -9865,7 +9865,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/dfe4aec19409d7eabca793bb5b464d81b636c853be33157b1d8121959be3f066f22ebe1d233d0eaaf29fac21cd746ba29acb50ed9bbf6e0a3b892c8e5ed0daa5
+  checksum: 10/e8a5ce1a011fbbb20b454bd7db9d28527baae157c2a583c3ff68ca52f4fe97cec9a4ec18811e6509ef4199349286dce3c24c02a3536000d6e6107778f870435f
   languageName: node
   linkType: hard
 
