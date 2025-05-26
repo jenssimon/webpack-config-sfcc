@@ -10825,13 +10825,13 @@ __metadata:
   linkType: hard
 
 "webpack-remove-empty-scripts@npm:^1.0.4":
-  version: 1.1.0
-  resolution: "webpack-remove-empty-scripts@npm:1.1.0"
+  version: 1.1.1
+  resolution: "webpack-remove-empty-scripts@npm:1.1.1"
   dependencies:
     ansis: "npm:4.0.0-node10"
   peerDependencies:
     webpack: ">=5.32.0"
-  checksum: 10/5d1119f16b6ac780c222c94cc367691befaffb66fdb2302848f6722760dcfb956a8762a35ec07e94c74362e33f7f131d52db592618927d84ed367d494110c256
+  checksum: 10/6293525b681384758213405d256e52c10e3cb83f414bf4862aa1746c2f7cee5a56db0c454c0f85bee9c5a86bd8e43da2b4428fd5a3dc8b1e7ce88c1a910c12bb
   languageName: node
   linkType: hard
 
