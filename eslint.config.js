@@ -1,6 +1,7 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
 import { FlatCompat } from '@eslint/eslintrc'
@@ -16,7 +17,7 @@ const compat = new FlatCompat({
 })
 
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: [
       '.yarn/',
