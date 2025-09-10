@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prevent-abbreviations */
 import fs from 'node:fs'
 
 import { parse } from 'yaml'
@@ -32,7 +33,7 @@ const getOptions = (options: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConf
     allowCircularDependendies: false,
   }
 
-  // eslint-disable-next-line unicorn/prevent-abbreviations
+
   const devServer = options?.env?.WEBPACK_SERVE === true
 
   let hostname: string | undefined

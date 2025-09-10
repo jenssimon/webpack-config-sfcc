@@ -243,9 +243,9 @@ export interface SFCCWebpackConfigOptions {
 /**
  * A function which generates a Webpack config section.
  */
-export type ConfigurationFnc<T> = (cartridge: string, options: SFCCWebpackConfigOptions) => T;
+export type ConfigurationFnc<T> = (cartridge: string, options: SFCCWebpackConfigOptions) => T
 
 
 export type WebpackConfigurationGenerator = (
   cartridge: string, options: Partial<SFCCWebpackConfigOptions>
-) => WebpackOptionsNormalized;
+) => WebpackOptionsNormalized
