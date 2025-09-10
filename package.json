@@ -48,8 +48,6 @@
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
-    "@eslint/compat": "^1.2.4",
-    "@eslint/eslintrc": "^3.2.0",
     "@jenssimon/eslint-config-base": "^9.0.0",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.8",
     "@types/circular-dependency-plugin": "^5.0.7",
