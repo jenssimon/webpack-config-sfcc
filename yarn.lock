@@ -2286,8 +2286,8 @@ __metadata:
   linkType: hard
 
 "@jenssimon/eslint-config-base@npm:^9.0.0":
-  version: 9.0.6
-  resolution: "@jenssimon/eslint-config-base@npm:9.0.6"
+  version: 9.0.7
+  resolution: "@jenssimon/eslint-config-base@npm:9.0.7"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.4.1"
     "@eslint/js": "npm:^9.35.0"
@@ -2302,7 +2302,7 @@ __metadata:
     eslint-plugin-unicorn: "npm:^61.0.2"
   peerDependencies:
     eslint: ">= 9"
-  checksum: 10/4d2bf3eca5b816186e8766a293d64dbf09444dfa3be3e61832b007c7fd4060cfde142a6296b73c7f1f656825d1b934db17e65ae20219ea86705f8ec4361720b9
+  checksum: 10/a221ae8a8ec767a75169bef10ffae76838727cd14bbf4f52fd25198f485ee616ca36da296a722c5d8ee3598ed292d77379d750750f80da0e9a8e3390d2fae4aa
   languageName: node
   linkType: hard
 
@@ -2336,7 +2336,7 @@ __metadata:
     postcss-loader: "npm:^8.0.0"
     postcss-merge-longhand: "npm:^7.0.0"
     postcss-preset-env: "npm:^10.0.0"
-    sass: "npm:1.92.1"
+    sass: "npm:1.93.0"
     sass-loader: "npm:^16.0.0"
     swc-loader: "npm:^0.2.3"
     typescript: "npm:^5.2.2"
@@ -10021,9 +10021,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.92.1":
-  version: 1.92.1
-  resolution: "sass@npm:1.92.1"
+"sass@npm:1.93.0":
+  version: 1.93.0
+  resolution: "sass@npm:1.93.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -10034,7 +10034,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/ded47fd238d20a826bf3c5d129b4849100abae6fafe525a082d936b5793d7fd59a914134a302f0a6780efb5b26fdc2d1f1bfa37d8a9302ba632cad5e67675eec
+  checksum: 10/37f22e016e1d5ad04754123009064260c1f568771688742a2b34c763d7c30b706e8c991dffb578ca6a1ecf598ea57e7392597719786eff5eb47b099b7dbf03cd
   languageName: node
   linkType: hard
 
