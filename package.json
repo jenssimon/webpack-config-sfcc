@@ -46,8 +46,8 @@
     "yaml": "^2.3.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.0",
-    "@commitlint/config-conventional": "^19.0.0",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@jenssimon/eslint-config-base": "^9.0.0",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.8",
     "@types/circular-dependency-plugin": "^5.0.7",
