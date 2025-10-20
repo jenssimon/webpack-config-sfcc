@@ -2,6 +2,11 @@
 
 # @jenssimon/webpack-config-sfcc
 
+> [!WARNING]
+> **DEPRECATION:**
+> Webpack was a good tool for that job.
+> But with tools like [Vite](https://vite.dev/) available for a long time it's time for a change.
+
 > A shareable Webpack configuration for SFCC projects
 
 ## General
