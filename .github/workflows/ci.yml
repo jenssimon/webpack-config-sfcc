@@ -1,5 +1,9 @@
 name: CI
 
+permissions:
+  id-token: write
+  contents: write
+
 on:
   push:
     branches: [ '**' ]
@@ -30,17 +34,20 @@ jobs:
 
   release:
     needs: [build]
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v5
-        - uses: actions/setup-node@v6
-          with:
-            node-version-file: .nvmrc
-            cache: 'yarn'
-        - name: Release
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          run: |
-            yarn
-            npx semantic-release
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: 'yarn'
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          yarn
+          npx semantic-release
