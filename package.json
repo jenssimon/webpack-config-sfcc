@@ -55,7 +55,7 @@
     "@jenssimon/eslint-config-base": "^9.0.0",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.8",
     "@types/circular-dependency-plugin": "^5.0.7",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.0.0",
     "@types/webpack": "^5.28.4",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
