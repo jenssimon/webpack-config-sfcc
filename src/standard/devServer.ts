@@ -30,9 +30,9 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
       }
 
       server.app.get(
-        `/on/demandware.static/Sites-${
+        String.raw`/on/demandware.static/Sites-${
           site
-        }-Site/-/${locale}/:hash(v(\\w{0,}))/:staticfile(\\S*)`,
+        }-Site/-/${locale}/:hash(v(\w{0,}))/:staticfile(\S*)`,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (request: any, response: any) => {
           response.redirect(`/on/demandware.static/Sites-${

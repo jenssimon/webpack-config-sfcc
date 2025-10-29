@@ -18,7 +18,7 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
   // `transformNodeModules` option.
   const exclude = (name: string): boolean => (
     name.includes('node_modules')
-      ? !(transformNodeModules ?? []).some((module) => new RegExp(`node_modules[/\\\\]?${module}`).test(name))
+      ? !(transformNodeModules ?? []).some((module) => new RegExp(String.raw`node_modules[/\\]?${module}`).test(name))
       : false
   )
 
