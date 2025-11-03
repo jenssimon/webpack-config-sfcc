@@ -23,7 +23,6 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
         changeOrigin: true,
       },
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setupMiddlewares: (middlewares: any, server: any) => {
       if (!server) {
         throw new Error('webpack-dev-server is not defined')
@@ -33,7 +32,6 @@ const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> =
         String.raw`/on/demandware.static/Sites-${
           site
         }-Site/-/${locale}/:hash(v(\w{0,}))/:staticfile(\S*)`,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (request: any, response: any) => {
           response.redirect(`/on/demandware.static/Sites-${
             site

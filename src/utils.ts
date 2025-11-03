@@ -84,7 +84,6 @@ export const generateWebpackConfiguration = (
     .entries(sections)
     // eslint-disable-next-line unicorn/no-array-reduce
     .reduce((previous, [key, value]) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (previous as any)[key] = value(cartridge, intOptions)
       return previous
     }, {}) as WebpackOptionsNormalized
