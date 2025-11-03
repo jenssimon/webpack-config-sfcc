@@ -1,5 +1,5 @@
-import swcRules from './module/rules/swc.js'
-import cssRules from './module/rules/css.js'
+import swc from './module/rules/swc.js'
+import css from './module/rules/css.js'
 
 import type { Configuration } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
@@ -11,10 +11,10 @@ import type { ConfigurationFnc } from '../types.js'
 const theModule: ConfigurationFnc<Configuration['module']> = (cartridge, options) => ({
   rules: [
     // SWC is used to transpile JavaScript and TypeScript files.
-    ...swcRules(cartridge, options),
+    ...swc(cartridge, options),
 
     // CSS usally written using SCSS will be transpiled and in an additional step processed by PostCSS.
-    ...cssRules(cartridge, options),
+    ...css(cartridge, options),
 
     ...options.projectSpecificRules,
   ],

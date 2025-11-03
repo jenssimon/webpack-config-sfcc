@@ -247,5 +247,5 @@ export type ConfigurationFnc<T> = (cartridge: string, options: SFCCWebpackConfig
 
 
 export type WebpackConfigurationGenerator = (
-  cartridge: string, options: Partial<SFCCWebpackConfigOptions>
+  cartridge: string, options: Partial<SFCCWebpackConfigOptions>,
 ) => WebpackOptionsNormalized

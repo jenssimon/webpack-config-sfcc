@@ -3,7 +3,6 @@
 /**
  * A shared Webpack configuration for Salesforce Commerce Cloud (SFCC) projects.
  */
-// eslint-disable-next-line import-x/no-useless-path-segments
 import generateConfiguration from './standard/index.js'
 
 import { DEFAULT_DEVELOPMENT, DEFAULT_PRODUCTION } from './defaults.js'
