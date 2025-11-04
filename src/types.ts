@@ -12,17 +12,17 @@ export interface CartridgeAliasConfig {
    * The name of the alias.
    * This is the alias you will use in code.
    */
-  alias: string
+  alias: string,
 
   /**
    * The name of the SFCC cartridge to alias.
    */
-  cartridge: string
+  cartridge: string,
 
   /**
    * Don't add an `-css` alias for this cartridge. Only JS.
    */
-  noStyle?: boolean
+  noStyle?: boolean,
 }
 
 
@@ -45,7 +45,7 @@ export interface SFCCWebpackConfigOptions {
    * }
    * ```
    */
-  dirname: string
+  dirname: string,
 
   /**
    * The `require.resolve` function of the package that consumes the generated Webpack configuration.
@@ -62,28 +62,28 @@ export interface SFCCWebpackConfigOptions {
    * }
    * ```
    */
-  resolver: NodeJS.RequireResolve
+  resolver: NodeJS.RequireResolve,
 
   /**
    * The entrypoint of the application.
    *
    * Default: `index.js`
    */
-  entryPoint?: string
+  entryPoint?: string,
 
   /**
    * The name of the JS entrypoint.
    *
    * Default: `app`
    */
-  entryName?: string
+  entryName?: string,
 
   /**
    * The name of the CSS entrypoint.
    *
    * Default: `app`
    */
-  cssEntryName?: string
+  cssEntryName?: string,
 
   /**
    * The path prefix for the generated bundles.
@@ -92,58 +92,58 @@ export interface SFCCWebpackConfigOptions {
    *
    * This is used to bundle files to another subfolder during the production build (e.g. `dist/`)..
    */
-  pathPrefix?: string
+  pathPrefix?: string,
 
   /**
    * Generate source maps for `.js` and `.css` files.
    *
    * Default: `false`
    */
-  sourceMap: boolean
+  sourceMap: boolean,
 
   /**
    * Build Webpack config for usage with dev server.
    *
    * Default: `false`
    */
-  devServer: boolean
+  devServer: boolean,
 
-  env?: Record<string, string | boolean>
+  env?: Record<string, string | boolean>,
 
-  site?: string
+  site?: string,
 
-  locale?: string
+  locale?: string,
 
-  hostname?: string
+  hostname?: string,
 
-  publicPath?: string
+  publicPath?: string,
 
-  hmrPath?: string
+  hmrPath?: string,
 
   /**
    * Use production mode.
    *
    * Default: `false`
    */
-  production: boolean
+  production: boolean,
 
   /**
    * Loaders executed before `mini-css-extract-plugin` loader.
    *
    * Default: `[]`
    */
-  preCSSExtractLoaders: string[]
+  preCSSExtractLoaders: string[],
 
-  additionalPlugins: ((this: Compiler, compiler: Compiler) => void) | WebpackPluginInstance[]
+  additionalPlugins: ((this: Compiler, compiler: Compiler) => void) | WebpackPluginInstance[],
 
   /**
    * Additional entry point configurations.
    */
-  additionalEntries?: EntryObject
+  additionalEntries?: EntryObject,
 
-  additionalPostCSSPlugins: AcceptedPlugin[]
+  additionalPostCSSPlugins: AcceptedPlugin[],
 
-  additionalDefine: Record<string, unknown>
+  additionalDefine: Record<string, unknown>,
 
   /**
    * Disable linting.
@@ -151,16 +151,16 @@ export interface SFCCWebpackConfigOptions {
    *
    * Default: `false`
    */
-  noLint: boolean
+  noLint: boolean,
 
-  onlyCartridge?: string
+  onlyCartridge?: string,
 
   /**
    * Additional Webpack rules (see https://webpack.js.org/configuration/module/#modulerules) used for your cartridge.
    *
    * Default: `[]`
    */
-  projectSpecificRules: RuleSetRule[]
+  projectSpecificRules: RuleSetRule[],
 
   /**
    * Aliases
@@ -171,16 +171,16 @@ export interface SFCCWebpackConfigOptions {
     /**
      * New request.
      */
-    alias: string | false | string[]
+    alias: string | false | string[],
     /**
      * Request to be redirected.
      */
-    name: string
+    name: string,
     /**
      * Redirect only exact matching request.
      */
-    onlyModule?: boolean
-  }[] | Record<string, string | false | string[]>
+    onlyModule?: boolean,
+  }[] | Record<string, string | false | string[]>,
 
   /**
    * Cartridges that needs an alias configuration.
@@ -205,14 +205,14 @@ export interface SFCCWebpackConfigOptions {
    *
    * Aliases for `app_storefront_base` will be created by default.
    */
-  aliasCartridges?: CartridgeAliasConfig[]
+  aliasCartridges?: CartridgeAliasConfig[],
 
   /**
    * The target environment for swc (see https://swc.rs/docs/configuring-swc#jsctarget).
    *
    * Default: `"es2019"`
    */
-  swcTarget?: string
+  swcTarget?: string,
 
   /**
    * Some packages from `node_modules` need to be transpiled. You can specify a list of packages using this option.
@@ -229,14 +229,14 @@ export interface SFCCWebpackConfigOptions {
    * ```
    *
    */
-  transformNodeModules?: string[]
+  transformNodeModules?: string[],
 
   /**
    * Allow circular dependencies.
    *
    * Default: `false`
    */
-  allowCircularDependendies: boolean
+  allowCircularDependendies: boolean,
 }
 
 
