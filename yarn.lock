@@ -1083,16 +1083,16 @@ __metadata:
   linkType: hard
 
 "@eslint/compat@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "@eslint/compat@npm:2.0.1"
+  version: 2.0.2
+  resolution: "@eslint/compat@npm:2.0.2"
   dependencies:
-    "@eslint/core": "npm:^1.0.1"
+    "@eslint/core": "npm:^1.1.0"
   peerDependencies:
-    eslint: ^8.40 || 9
+    eslint: ^8.40 || 9 || 10
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: 10/3ae4af6faba4a1191fc42f51675e1e8a78f9133e980133e2a6b86acd7d9d79bb8692afbeef283c4359a611874cd6bd4583464ae656f9a64d7dcecbbdb7afaa08
+  checksum: 10/027525ddafc0363a82df3ebc82b44214bb32a3e7bec8f4ad9ddb2fc43fa64f1c031f8f39a9164d14ed4a5f431c0abbf4c0b38021e88a5dd36cb19cfd92376acd
   languageName: node
   linkType: hard
 
@@ -1125,12 +1125,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/core@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@eslint/core@npm:1.0.1"
+"@eslint/core@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@eslint/core@npm:1.1.0"
   dependencies:
     "@types/json-schema": "npm:^7.0.15"
-  checksum: 10/442b54d50adee1681672596abc538cba1a57d108d28e39aeed64e4beaee23aa6f9f029c7bc0b39e26d8c4754de16305fbfce7f6539e7df266163c0c49fbaa4af
+  checksum: 10/f62724beacbb5fdd3560816a4edbbf832485cbec9516b76037fdf2cc2d75011e546e305a22feaa6bed4c1a26d069dc953979aa3c8c28eccf0a746a5ac53483b0
   languageName: node
   linkType: hard
 
@@ -3226,11 +3226,11 @@ __metadata:
   linkType: hard
 
 "autoprefixer@npm:^10.4.16, autoprefixer@npm:^10.4.23":
-  version: 10.4.23
-  resolution: "autoprefixer@npm:10.4.23"
+  version: 10.4.24
+  resolution: "autoprefixer@npm:10.4.24"
   dependencies:
     browserslist: "npm:^4.28.1"
-    caniuse-lite: "npm:^1.0.30001760"
+    caniuse-lite: "npm:^1.0.30001766"
     fraction.js: "npm:^5.3.4"
     picocolors: "npm:^1.1.1"
     postcss-value-parser: "npm:^4.2.0"
@@ -3238,7 +3238,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 10/153033db6f137712383ddf3f1f267b1d5900695d135f7794cbfaaec832fdbf4e34efd85418dec6f78c418062afdf3f0a07313e32a83764c119bfb5b2f01648b6
+  checksum: 10/d09c4259a96001256e3150c2734aa0c5f7a53d98cc69ec42ef5fa167aadd804e857040dc3c732f62d80602212ebfd7d8783c9d27f1766a413f637eeac4fefa53
   languageName: node
   linkType: hard
 
@@ -3524,10 +3524,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001759, caniuse-lite@npm:^1.0.30001760":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001759":
   version: 1.0.30001762
   resolution: "caniuse-lite@npm:1.0.30001762"
   checksum: 10/d60a589180198ac759fa1775e521862f03503286cc9354144adcd88e76d275f03b2b6e9cab1c606790eee9d6af5cedbedb048ec652f5ff77a2b229992b7c4845
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001766":
+  version: 1.0.30001766
+  resolution: "caniuse-lite@npm:1.0.30001766"
+  checksum: 10/0edeb69bdb741c98deda609b75e35e5c31e944537e9873ea89a4cf9e9baa3e158675b224951a6f3a212d1f0c328a8494ace323c551ca1fa58ce4915562c4e4d3
   languageName: node
   linkType: hard
 
