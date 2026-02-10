@@ -1117,7 +1117,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/plugin-kit@npm:^0.4.0, @eslint/plugin-kit@npm:^0.4.1":
+"@eslint/plugin-kit@npm:^0.4.1":
   version: 0.4.1
   resolution: "@eslint/plugin-kit@npm:0.4.1"
   dependencies:
@@ -1184,18 +1184,18 @@ __metadata:
   linkType: hard
 
 "@jenssimon/eslint-config-base@npm:^10.0.0":
-  version: 10.1.0
-  resolution: "@jenssimon/eslint-config-base@npm:10.1.0"
+  version: 10.1.1
+  resolution: "@jenssimon/eslint-config-base@npm:10.1.1"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.6.0"
     eslint-plugin-import-esm: "npm:^3.0.1"
     eslint-plugin-promise: "npm:^7.2.1"
     eslint-plugin-sonarjs: "npm:^3.0.6"
-    eslint-plugin-unicorn: "npm:^62.0.0"
+    eslint-plugin-unicorn: "npm:^63.0.0"
   peerDependencies:
     eslint: ">= 9"
     eslint-config-airbnb-extended: ">= 3"
-  checksum: 10/8ad6488ea5a25cfcc46b309e9f6e756f15b86e18013219bd0186d3e0818667a96cb38dcf1841256a5a92d26a95f7839437972df085b21d69f96a54fbd2085253
+  checksum: 10/bd6b74e4fb1ce07ce1790b7d43e67cc08b4cd6fafd21e508100674dd78c1f709ba18262e107a081cd1a48e73ebfdb9cb8942df01cb0ded98f9fd7ab46d6fa5ca
   languageName: node
   linkType: hard
 
@@ -5172,18 +5172,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:^62.0.0":
-  version: 62.0.0
-  resolution: "eslint-plugin-unicorn@npm:62.0.0"
+"eslint-plugin-unicorn@npm:^63.0.0":
+  version: 63.0.0
+  resolution: "eslint-plugin-unicorn@npm:63.0.0"
   dependencies:
     "@babel/helper-validator-identifier": "npm:^7.28.5"
     "@eslint-community/eslint-utils": "npm:^4.9.0"
-    "@eslint/plugin-kit": "npm:^0.4.0"
     change-case: "npm:^5.4.4"
     ci-info: "npm:^4.3.1"
     clean-regexp: "npm:^1.0.0"
     core-js-compat: "npm:^3.46.0"
-    esquery: "npm:^1.6.0"
     find-up-simple: "npm:^1.0.1"
     globals: "npm:^16.4.0"
     indent-string: "npm:^5.0.0"
@@ -5196,7 +5194,7 @@ __metadata:
     strip-indent: "npm:^4.1.1"
   peerDependencies:
     eslint: ">=9.38.0"
-  checksum: 10/bae4fee1f9e65c0d7f3b6b59b46a1963393434956ebc5860281ff7141a4d4b494cf4d9db966d3fcf5baffbbfb2e92cec4864ba8de0af7c73a3ca1ba789827525
+  checksum: 10/bfcaf383e8e244c13311900d4e152b1a4134f844ddc8514d86aca7da932a4663b144fceca7a32a796faaf53a84a203dcd3052ef846c05990dd285c19ed6c9f17
   languageName: node
   linkType: hard
 
@@ -5311,7 +5309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esquery@npm:^1.5.0, esquery@npm:^1.6.0":
+"esquery@npm:^1.5.0":
   version: 1.7.0
   resolution: "esquery@npm:1.7.0"
   dependencies:
