@@ -1230,7 +1230,7 @@ __metadata:
     circular-dependency-plugin: "npm:^5.2.2"
     commitizen: "npm:^4.3.0"
     css-loader: "npm:^7.0.0"
-    css-minimizer-webpack-plugin: "npm:^7.0.0"
+    css-minimizer-webpack-plugin: "npm:^8.0.0"
     cz-conventional-changelog: "npm:^3.3.0"
     eslint: "npm:^9.39.0"
     eslint-config-airbnb-extended: "npm:^3.0.0"
@@ -4195,16 +4195,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-minimizer-webpack-plugin@npm:^7.0.0":
-  version: 7.0.4
-  resolution: "css-minimizer-webpack-plugin@npm:7.0.4"
+"css-minimizer-webpack-plugin@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "css-minimizer-webpack-plugin@npm:8.0.0"
   dependencies:
     "@jridgewell/trace-mapping": "npm:^0.3.25"
     cssnano: "npm:^7.0.4"
     jest-worker: "npm:^30.0.5"
     postcss: "npm:^8.4.40"
     schema-utils: "npm:^4.2.0"
-    serialize-javascript: "npm:^6.0.2"
+    serialize-javascript: "npm:^7.0.3"
   peerDependencies:
     webpack: ^5.0.0
   peerDependenciesMeta:
@@ -4220,7 +4220,7 @@ __metadata:
       optional: true
     lightningcss:
       optional: true
-  checksum: 10/23688887b9b8166555864d7b6571b98390cf81b296b283736fe1aa7598d84face212ad983c02696cba1bf0e51f0a3208944ebd00cd5e1ccab9a6dc0af0914593
+  checksum: 10/ad130892e0f84af492d638b2659a855e4466a3558760ff03288b251ce20f4bbb4d7a12795f5702441dc466837c1793882a238a43f5d35950d836bd41fd52d0e3
   languageName: node
   linkType: hard
 
@@ -9515,6 +9515,13 @@ __metadata:
   dependencies:
     randombytes: "npm:^2.1.0"
   checksum: 10/445a420a6fa2eaee4b70cbd884d538e259ab278200a2ededd73253ada17d5d48e91fb1f4cd224a236ab62ea7ba0a70c6af29fc93b4f3d3078bf7da1c031fde58
+  languageName: node
+  linkType: hard
+
+"serialize-javascript@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "serialize-javascript@npm:7.0.3"
+  checksum: 10/ce45e28663ee1fa6f32c408c0a563c4a96e872cdc83dc3064c73126f2412048c6c984bfc1160c40188fcfa06cf5e075f5cc2e3261b0384dc8fdef34675c5adef
   languageName: node
   linkType: hard
 
