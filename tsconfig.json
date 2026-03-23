@@ -3,6 +3,7 @@
     "declaration": true,
     "target": "es2021",
     "outDir": "dist",
+    "rootDir": "src/",
     "moduleResolution": "node",
     "sourceMap": true,
     "strict": true,
@@ -11,6 +12,8 @@
 
     /* Advanced Options */
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    "ignoreDeprecations": "6.0"
   }
 }
