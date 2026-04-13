@@ -3371,11 +3371,11 @@ __metadata:
   linkType: hard
 
 "autoprefixer@npm:^10.4.16, autoprefixer@npm:^10.4.24":
-  version: 10.4.27
-  resolution: "autoprefixer@npm:10.4.27"
+  version: 10.5.0
+  resolution: "autoprefixer@npm:10.5.0"
   dependencies:
-    browserslist: "npm:^4.28.1"
-    caniuse-lite: "npm:^1.0.30001774"
+    browserslist: "npm:^4.28.2"
+    caniuse-lite: "npm:^1.0.30001787"
     fraction.js: "npm:^5.3.4"
     picocolors: "npm:^1.1.1"
     postcss-value-parser: "npm:^4.2.0"
@@ -3383,7 +3383,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 10/5dd9ec57cc1c2af556e10d6c76d082f66d23275671b8b125f6c1d33ba7d9a984d80d3fb4fab7b5e092ac1a34f3aa5a131a392f131f5924029c3cb82faea15b0c
+  checksum: 10/3398a70ad57dfeb4fc1dd6b344c99ab996002780cd777af853de0bcc442c0f31d8c3fc9ab3ba018a2f0d34f0c102ce7b75ad35bb5d7b50f2792a3b62899189b2
   languageName: node
   linkType: hard
 
@@ -3428,6 +3428,15 @@ __metadata:
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
   checksum: 10/669632eb3745404c2f822a18fc3a0122d2f9a7a13f7fb8b5823ee19d1d2ff9ee5b52c53367176ea4ad093c332fd5ab4bd0ebae5a8e27917a4105a4cfc86b1005
+  languageName: node
+  linkType: hard
+
+"baseline-browser-mapping@npm:^2.10.12":
+  version: 2.10.18
+  resolution: "baseline-browser-mapping@npm:2.10.18"
+  bin:
+    baseline-browser-mapping: dist/cli.cjs
+  checksum: 10/b0babff57a53539fc5f8b757dc224a2d1296ec7c91975373da70757041a03d797bc09a13820bfb4e6ce363cc1cf84b6b3649abc7fd912aa9104bc693bc714e50
   languageName: node
   linkType: hard
 
@@ -3542,6 +3551,21 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 10/64f2a97de4bce8473c0e5ae0af8d76d1ead07a5b05fc6bc87b848678bb9c3a91ae787b27aa98cdd33fc00779607e6c156000bed58fefb9cf8e4c5a183b994cdb
+  languageName: node
+  linkType: hard
+
+"browserslist@npm:^4.28.2":
+  version: 4.28.2
+  resolution: "browserslist@npm:4.28.2"
+  dependencies:
+    baseline-browser-mapping: "npm:^2.10.12"
+    caniuse-lite: "npm:^1.0.30001782"
+    electron-to-chromium: "npm:^1.5.328"
+    node-releases: "npm:^2.0.36"
+    update-browserslist-db: "npm:^1.2.3"
+  bin:
+    browserslist: cli.js
+  checksum: 10/cff88386e5b5ba5614c9063bd32ef94865bba22b6a381844c7d09ea1eea62a2247e7106e516abdbfda6b75b9986044c991dfe45f92f10add5ad63dccc07589ec
   languageName: node
   linkType: hard
 
@@ -3675,10 +3699,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001759, caniuse-lite@npm:^1.0.30001774":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001759":
   version: 1.0.30001781
   resolution: "caniuse-lite@npm:1.0.30001781"
   checksum: 10/13000e0bbb340d5b7d2543293c84439acf3ac6b643ae9a5b69e92138c95471b5e97067a8eb2b28e79b67d1390cc2a51ba2d5c474f745f7f1f7a955392fd0ec4f
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001782, caniuse-lite@npm:^1.0.30001787":
+  version: 1.0.30001787
+  resolution: "caniuse-lite@npm:1.0.30001787"
+  checksum: 10/2b3a2400b21d89123f13b7a8a7ad58dbdeb9971b62e33f43712d7209b69656f8bfd8ab67ab760c12e5fa7967b18c108ca67d7f20b7c7ccf039621f7db56baecf
   languageName: node
   linkType: hard
 
@@ -4651,6 +4682,13 @@ __metadata:
   version: 1.5.321
   resolution: "electron-to-chromium@npm:1.5.321"
   checksum: 10/ccb635798bf9451f4b77ef10288c43f39f30904300c176aac38dbb082ab080828588c3f48952f27b4157dcf068405dc44a7df439715907dadf9d65d9785215e7
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.5.328":
+  version: 1.5.336
+  resolution: "electron-to-chromium@npm:1.5.336"
+  checksum: 10/85b31ea1fff12ce6f3738f9598a189644509d72027b4cdc6b5f2c74763e94877a807e6ba7b20199ca716a9c5697a2dd7e79e15a49bf17d75a3a3181cbf936e09
   languageName: node
   linkType: hard
 
@@ -7652,6 +7690,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-releases@npm:^2.0.36":
+  version: 2.0.37
+  resolution: "node-releases@npm:2.0.37"
+  checksum: 10/c4b376a7cd15cd6a0ed93a65a51ca865a07282b583ede0b42233cec60351faafb5a5d2afe652e916b53fd34b1e97ea5444fa6ce77b06f289a9622d159d6ac9e7
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^9.0.0":
   version: 9.0.0
   resolution: "nopt@npm:9.0.0"
@@ -10393,7 +10438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"update-browserslist-db@npm:^1.2.0":
+"update-browserslist-db@npm:^1.2.0, update-browserslist-db@npm:^1.2.3":
   version: 1.2.3
   resolution: "update-browserslist-db@npm:1.2.3"
   dependencies:
