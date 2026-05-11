@@ -1281,7 +1281,7 @@ __metadata:
     pinst: "npm:^3.0.0"
     postcss: "npm:^8.4.31"
     postcss-loader: "npm:^8.0.0"
-    postcss-merge-longhand: "npm:^7.0.0"
+    postcss-merge-longhand: "npm:^8.0.0"
     postcss-preset-env: "npm:^11.0.0"
     sass: "npm:1.99.0"
     sass-loader: "npm:^16.0.0"
@@ -8430,7 +8430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-merge-longhand@npm:^7.0.0, postcss-merge-longhand@npm:^7.0.5":
+"postcss-merge-longhand@npm:^7.0.5":
   version: 7.0.7
   resolution: "postcss-merge-longhand@npm:7.0.7"
   dependencies:
@@ -8439,6 +8439,18 @@ __metadata:
   peerDependencies:
     postcss: ^8.5.13
   checksum: 10/6428417fc9caa2964af97f54026b73077630d32bd6a8f4927ca0834a15f871935dd3506eace9aa4fbf0f89be07f938e581b5ade76e1f7ffded7a0cf1f6e1489d
+  languageName: node
+  linkType: hard
+
+"postcss-merge-longhand@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "postcss-merge-longhand@npm:8.0.0"
+  dependencies:
+    postcss-value-parser: "npm:^4.2.0"
+    stylehacks: "npm:^8.0.0"
+  peerDependencies:
+    postcss: ^8.5.14
+  checksum: 10/c8c167c102ff30e835f7d4bae7804e5da15bb75a830adbc33297939541ac3390d7faa7ae4f73ab7796674facfca3c3d05b19cab9424bb6397694667063da516b
   languageName: node
   linkType: hard
 
@@ -9997,6 +10009,18 @@ __metadata:
   peerDependencies:
     postcss: ^8.5.13
   checksum: 10/937a53ca6c96447438cc1a556744a3cc3268afed8ffdb239326e574eb93b5be8f13d347602d901cd81bb4d790d5568e4b57a9ae9447b21a947feea06d883a5c8
+  languageName: node
+  linkType: hard
+
+"stylehacks@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "stylehacks@npm:8.0.0"
+  dependencies:
+    browserslist: "npm:^4.28.2"
+    postcss-selector-parser: "npm:^7.1.1"
+  peerDependencies:
+    postcss: ^8.5.14
+  checksum: 10/024d3200664647aec37f5487b67f1761457e4518cf7d028bf8872a41fb668beb21448b8d1d21c5ebed7f158fc88cccec342101657d1cfc72090f8a73079ee8d0
   languageName: node
   linkType: hard
 
