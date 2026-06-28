@@ -16,9 +16,10 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
 }) => {
   // Some packages from `node_modules` need to be transpiled. You can specify a list of packages using the
   // `transformNodeModules` option.
+  // eslint-disable-next-line unicorn/consistent-boolean-name
   const exclude = (name: string): boolean => (
     name.includes('node_modules')
-      ? !(transformNodeModules ?? []).some((module) => new RegExp(String.raw`node_modules[/\\]?${module}`).test(name))
+      ? (transformNodeModules ?? []).every((module) => !new RegExp(String.raw`node_modules[/\\]?${module}`).test(name))
       : false
   )
 
@@ -40,10 +41,10 @@ const swc: ConfigurationFnc<RuleSetRule[]> = (cartridge, {
           target,
           externalHelpers: true,
         },
-        ...sourceMap ? {
+        ...sourceMap && {
           sourceMap: true,
           inlineSourcesContent: true,
-        } : {},
+        },
       },
     },
   })

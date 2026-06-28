@@ -36,6 +36,7 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
       const returnValue = '../css/[name].css'
       const cssPostfix = '-css'
       return pathData.chunk?.name?.endsWith(cssPostfix)
+        // eslint-disable-next-line unicorn/no-unsafe-string-replacement
         ? returnValue.replace('[name]', pathData.chunk.name.slice(0, -cssPostfix.length))
         : returnValue
     },

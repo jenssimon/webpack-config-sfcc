@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
 import fs from 'node:fs'
 
 import { parse } from 'yaml'
@@ -34,7 +33,7 @@ const getOptions = (options: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConf
   }
 
 
-  const devServer = options?.env?.WEBPACK_SERVE === true
+  const isDevServer = options?.env?.WEBPACK_SERVE === true
 
   let hostname: string | undefined
   let site: string | undefined
@@ -56,7 +55,7 @@ const getOptions = (options: Partial<SFCCWebpackConfigOptions>): SFCCWebpackConf
     ...defaults,
     ...options,
 
-    devServer,
+    devServer: isDevServer,
 
     site,
     locale,

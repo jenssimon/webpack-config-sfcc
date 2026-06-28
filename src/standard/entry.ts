@@ -6,7 +6,7 @@ import type { ConfigurationFnc } from '../types.js'
  * The entry point configuation (see https://webpack.js.org/configuration/entry-context/#entry)
  */
 const entry: ConfigurationFnc<Configuration['entry']> = (cartridge, {
-  devServer = false, // eslint-disable-line unicorn/prevent-abbreviations
+  devServer = false,
   hmrPath,
   entryPoint,
   entryName,

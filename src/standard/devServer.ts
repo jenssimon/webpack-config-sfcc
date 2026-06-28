@@ -1,10 +1,8 @@
 /* eslint-disable unicorn/filename-case */
-// eslint-disable-next-line unicorn/prevent-abbreviations
 import type { WebpackOptionsNormalized } from 'webpack'
 import type { ConfigurationFnc } from '../types.js'
 
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 const devServerConfig: ConfigurationFnc<WebpackOptionsNormalized['devServer']> = (cartridge, {
   devServer, site, locale, hostname,
 }) => (devServer

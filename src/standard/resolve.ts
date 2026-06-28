@@ -19,6 +19,7 @@ const resolve: ConfigurationFnc<Configuration['resolve']> = (_cartridge, { alias
     ].reduce((accumulator, { cartridge, alias: cartridgeAlias, noStyle }) => ({
       ...accumulator,
       [cartridgeAlias]: `${dirname}/cartridges/${cartridge}/cartridge/client/default/js`,
+      // eslint-disable-next-line unicorn/consistent-conditional-object-spread
       ...noStyle ? {} : {
         // I will not comment why we use the -css postfix. Spoiler: Really hackish!
         [`${cartridgeAlias}-css`]: `${dirname}/cartridges/${cartridge}/cartridge/client/default/scss`,
