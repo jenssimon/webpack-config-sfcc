@@ -50,5 +50,8 @@ export default defineConfig(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      'unicorn/name-replacements': 'off',
+    },
   },
 )
