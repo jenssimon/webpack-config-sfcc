@@ -4,7 +4,7 @@
     "target": "es2021",
     "outDir": "dist",
     "rootDir": "src/",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
@@ -13,7 +13,5 @@
     /* Advanced Options */
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
-    "ignoreDeprecations": "6.0"
   }
 }
