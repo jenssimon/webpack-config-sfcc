@@ -28,7 +28,7 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
     exclude: /node_modules/, // exclude detection of files based on a RegExp
     failOnError: !allowCircularDependendies, // add errors to webpack instead of warnings
     cwd: process.cwd(), // set the current working directory for displaying module paths
-  }) as unknown as WebpackPluginInstance,
+  }),
 
   // Extract CSS files from JS bundle
   new MiniCssExtractPlugin({
@@ -41,7 +41,7 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
         : returnValue
     },
     // chunkFilename: '../css/[name].css',
-  }) as unknown as WebpackPluginInstance,
+  }),
 
   new RemoveEmptyScriptsPlugin({}),
 
@@ -56,7 +56,7 @@ const plugins: ConfigurationFnc<Configuration['plugins']> = (cartridge, {
 
   // HMR support for dev server
   ...devServer ? [
-    new HotModuleReplacementPlugin() as unknown as WebpackPluginInstance,
+    new HotModuleReplacementPlugin(),
   ] : [],
 ]
 
