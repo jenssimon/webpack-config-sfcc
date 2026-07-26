@@ -59,6 +59,7 @@
     "@types/circular-dependency-plugin": "^5.0.7",
     "@types/node": "^24.0.0",
     "@types/webpack": "^5.28.4",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^10.0.0",
@@ -66,7 +67,7 @@
     "husky": "^9.0.0",
     "lint-staged": "^17.0.0",
     "pinst": "^3.0.0",
-    "typescript": "^6.0.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
     "webpack": "^5.89.0",
     "webpack-dev-server": "^6.0.0"
   },
